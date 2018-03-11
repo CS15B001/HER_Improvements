@@ -1,0 +1,8 @@
+1) How to assign a priority to transitions of the form s||g' when we have not sampled g' yet?
+Possible Solutions:
+	(i) We could use all the encountered states as goals g' and store in the replay buffer
+	Naive solution with high number of forward passes and memory
+	(ii) Induce a priority map on episodes (in some way) and choose transitions from them. (But when do we decide what alternate goals to use, at sample time or storing time?)
+	(iii) Have a prior over which goals have been useful in the past. Use that prior distribution to sample
+
+2) Since we are evicting higher priority transitions from the heap, since the buffer is always full we will keep evicting the higher priority transitions and end up seeing them only once or twice max
