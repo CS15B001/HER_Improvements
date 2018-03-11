@@ -217,6 +217,7 @@ class DDPG(object):
 
         o = transitions['o']
         o_2 = transitions['o_2']
+        u = transitions['u']
         g = transitions['g']
         r = transitions['r']
 
@@ -225,17 +226,20 @@ class DDPG(object):
         for i in range(o.shape[0])
             o_2_i = np.clip(o_2[i], -self.clip_obs, self.clip_obs)
             o_i, g_i = self._preprocess_og(o[i], ag[i], g[i])
+            u_i = u[i]
 
+            # Not sure about the o_2_i.size // self.dimo. I guess we need not pass one at a time
             feed_target = {
                 self.target.o_tf: o_2_i.reshape(-1, self.dimo),
                 self.target.g_tf: g_i.reshape(-1, self.dimg),
                 self.target.u_tf: np.zeros((o_2_i.size // self.dimo, self.dimu), dtype=np.float32)
             }
 
+            # u_tf for main network is just the action taken at that state
             feed_main = {
                 self.main.o_tf: o_i.reshape(-1, self.dimo),
                 self.main.g_tf: g_i.reshape(-1, self.dimg),
-                self.main.u_tf: np.zeros((o_i.size // self.dimo, self.dimu), dtype=np.float32)
+                self.main.u_tf: u_i.reshape(-1, self.dimu)
             }
 
             TD = r[i] + self.gamma*self.sess.run(Q_pi_target, feed_dict=feed_target) - self.sess.run(Q_main, feed_dict=feed_main)
