@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\maximize}{max}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Weekly Report\\Hindsight reinforcement learning}
+
+\date{March 10, 2018}
+
+\begin{document}
+\maketitle
+\section*{Week 1}
+
+\subsection{Important Thoughts}
+\begin{itemize}
+	\item For Prioritized sampling with HER, we will need to take a call on what goals to append to the state. This is crucial to determine the TD error which decides its priority. There are two places where we can take this call. At \textit{Sample time} for each transition we can sample a goal and perform a forward pass, calculate $\delta$ and store in the priority queue. The drawback of this approach is that for every transition we have essentially fixed which goal it is attached to in the buffer and we cannot change that after storing. Another way is to perform the forward pass at sample time instead. Two drawbacks of this approach are that the forward pass now happens at sample time and for each transition we will also have to store the possible states which could have been considered as an alternate goal (according to some strategy like \textit{future)}. Since the episode behavior is lost there are two ways to solve this problem. Have an extra episode number entry and also store all the episodes. After sampling a transition from the priority queue and while sampling the goal, look up the episode and sample a state (goal) based on that.
+\end{itemize}
+
+\subsection{Implementation details}
+\begin{itemize}
+	\item We are going ahead with the following strategy for now. \textit{At Sample time for each transition we can sample a goal and perform a forward pass, calculate $\delta$ and store in the priority queue.} It is however important to maintain the $replay\_k$ ratio mentioned in the OpenAI code. We have identified the following three ways to do it.
+    \begin{itemize}
+	\item If there are $T$ transitions, for $\frac{replay\_k}{1+replay\_k}$ number of transitions use the alternate goal (ag) and for $\frac{1}{1+replay\_k}$ number of transitions use the actual goal. This way we store exactly $T$ transitions in each episode
+    \item Instead of storing $1$ goal per transition, store $replay\_k$ alternate goals per transition and $1$ actual goal per transition. This has the obvious downside of storing $(replay\_k+1)\times T$ number of transition per episode.
+    \item Maintain two different priority queues, one for the alternate goal transitions and the other for actual goal transitions.
+    
+    \end{itemize}
+    
+    \item Since we cannot sample all goals for all transitions (prohibitively expensive), we need to take a call on what goals we use. Use a hyperparameter $l$ and sample goals such that if state $s_k$ is used as a goal, use only further than states $s_{k+l} and s_{k-l}$ as goals. This follows the intuition that if an agent can reach a goal $g_k$, it can also probably reach spatially close goals like $g_{k+1}$.
+    
+  
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
