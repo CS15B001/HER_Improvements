@@ -30,7 +30,7 @@ def make_sample_her_transitions(replay_strategy, replay_k, reward_fun):
         # Sample from the given priority_queue
         # global_step represents the step of the learning process
         # needed for annealing the bias
-        sample_transitions = priority_queue.sample(global_step)
+        sample_transitions, w, rank_e_id = priority_queue.sample(global_step)
 
         # Create a dictionary
         # key_to_index_map maps the keys of episode batch to the corresponding

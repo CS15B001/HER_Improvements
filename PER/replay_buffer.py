@@ -2,6 +2,8 @@ import threading
 
 import numpy as np
 
+from rank_based import Experience
+
 
 class ReplayBuffer:
     def __init__(self, buffer_shapes, size_in_transitions, T, sample_transitions):
@@ -29,6 +31,14 @@ class ReplayBuffer:
         # self.buffers now contains static memory to store all the transitions
         self.buffers = {key: np.empty([self.size, *shape])
                         for key, shape in buffer_shapes.items()}
+
+        # Alternate Buffer - Priority Queue
+        # Remember: The bias gets annealed only conf.total_steps number of times
+        conf = {'size': self.size,
+                'learn_start': 32,
+                # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
+                'partition_num': 5*int(np.log(self.size))}
+        self.priority_queue = Experience(conf)
 
         # memory management
         self.current_size = 0
@@ -58,7 +68,7 @@ class ReplayBuffer:
         transitions = self.sample_transitions(buffers, batch_size)
 
         for key in (['r', 'o_2', 'ag_2'] + list(self.buffers.keys())):
-            assert key in transitions, "key %s missing from transitions" % key
+            assert key in transitions, "key %s missing from transitions. In replay_buffer.py" % key
 
         return transitions
 

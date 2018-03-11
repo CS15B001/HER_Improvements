@@ -28,7 +28,7 @@ class Experience(object):
         # beta_zero to 1. Section 3.4 of the paper
         self.beta_zero = conf['beta_zero'] if 'beta_zero' in conf else 0.5
         self.batch_size = conf['batch_size'] if 'batch_size' in conf else 32
-        self.learn_start = conf['learn_start'] if 'learn_start' in conf else 1000
+        self.learn_start = conf['learn_start'] if 'learn_start' in conf else 32
         self.total_steps = conf['steps'] if 'steps' in conf else 100000
         # partition number N, split total size to N part
         self.partition_num = conf['partition_num'] if 'partition_num' in conf else 100
@@ -194,7 +194,8 @@ class Experience(object):
         for i in range(0, len(indices)):
             self.priority_queue.update(math.fabs(delta[i]), indices[i])
 
-    def sample(self, global_step):
+    # if batch_size argument is passed, use that, else use the one at __init__
+    def sample(self, global_step, batch_size=self.batch_size):
         """
         sample a mini batch from experience replay
         :param global_step: now training step
