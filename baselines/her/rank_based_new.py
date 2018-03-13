@@ -9,7 +9,7 @@ import math
 import random
 import numpy as np
 
-from  binary_heap import BinaryHeap
+from  baselines.her.binary_heap import BinaryHeap
 
 
 """
@@ -61,12 +61,14 @@ class Experience(object):
 
     # Return the correct distribution, build if required
     def return_distribution(self, dist_index):
-        if dist_index == self.dist_index and self.dist_index > 1:
+        if (dist_index == self.dist_index) and self.dist_index > 1:
             return self.distribution
         elif dist_index < self.dist_index:
             raise Exception('Elements have been illegally deleted from the priority_queue in rank_based')
         else:
             res = {}
+            # Store the current dist_index
+            self.dist_index = dist_index
             partition_num = dist_index
 
             # The procedure being followed here is that given on Page 13
@@ -75,7 +77,7 @@ class Experience(object):
             # picked twice in the same batch (Stratified Sampling)
             n = partition_num * self.partition_size
 
-            if self.learn_start <= n <= self.priority_size:
+            if self.batch_size <= n <= self.priority_size:
                 distribution = {}
                 # P(i) = (rank i) ^ (-alpha) / sum ((rank i) ^ (-alpha))
                 pdf = list(
@@ -100,6 +102,8 @@ class Experience(object):
                     step += 1 / self.batch_size
 
                 distribution['strata_ends'] = strata_ends
+
+                # print("The strata is: "+str(distribution['strata_ends']))
 
                 self.distribution = distribution
         return self.distribution
@@ -231,6 +235,7 @@ class Experience(object):
         # dist_index will always be the last partition after the replay
         # buffer is full. If it is not full, it will represent some
         # partition number less than that
+        # print("Values are (record_size, size, partition_num)::"+str(self.record_size)+"::"+str(self.size)+"::"+str(self.partition_num))
         dist_index = math.floor(self.record_size / self.size * self.partition_num)
         # dist_index = max(math.floor(self.record_size / self.size * self.partition_num)+1, self.partition_num)
         # issue 1 by @camigord
@@ -242,6 +247,8 @@ class Experience(object):
         distribution = self.return_distribution(dist_index)
         ############################
 
+        # print("Dist Index is: "+str(dist_index))
+
         rank_list = []
         # sample from k segments
 
@@ -249,8 +256,12 @@ class Experience(object):
         # of 1/self.batch_size and we sample once from each segment
         # index represents which rank to choose, (1,n)
         for n in range(1, self.batch_size + 1):
-            index = random.randint(distribution['strata_ends'][n] + 1,
-                                   distribution['strata_ends'][n + 1])
+            if distribution['strata_ends'][n] + 1 >= distribution['strata_ends'][n + 1]:
+                index = distribution['strata_ends'][n + 1]
+            else:
+                # print("The values are: "+str(distribution['strata_ends'][n] + 1)+"::"+str(distribution['strata_ends'][n + 1]))
+                index = random.randint(distribution['strata_ends'][n] + 1,
+                                       distribution['strata_ends'][n + 1])
             rank_list.append(index)
 
         # beta, increase by global_step (the current training step), max 1

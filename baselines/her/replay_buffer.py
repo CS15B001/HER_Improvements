@@ -2,7 +2,7 @@ import threading
 
 import numpy as np
 
-from baselines.her.rank_based import Experience
+from baselines.her.rank_based_new import Experience
 
 
 class ReplayBuffer:

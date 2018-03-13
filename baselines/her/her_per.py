@@ -1,5 +1,4 @@
 import numpy as np
-from baselines.her.rank_based import Experience
 
 """
 Will serve as an alternative to her.py
@@ -33,12 +32,13 @@ def make_sample_her_transitions(replay_strategy, replay_k, reward_fun):
 
         # sample_transitions is now a list of transitions, convert it to the usual {key: batch X dim_key}
         keys = sample_transitions[0].keys()
+        transitions = {}
         for key in keys:
             # Initialize for all the keys
             transitions[key] = []
             # Add transitions one by one to the list
             for single_transition in range(len(sample_transitions)):
-                transitions[key].append(single_transition[key])
+                transitions[key].append(sample_transitions[single_transition][key])
             transitions[key] = np.array(transitions[key])
 
         # transitions is now of the expected format, need to add rewards

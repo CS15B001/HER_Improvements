@@ -98,11 +98,11 @@ class DDPG(object):
 
         # conf represents the parameters required for initializing the priority_queue
         # Remember: The bias gets annealed only conf.total_steps number of times
-        conf = {'size': self.buffer_size//100,
-                'learn_start': 1000,
+        conf = {'size': self.buffer_size,
+                'learn_start': 256,
                 'batch_size': 256,
                 # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
-                'partition_num': 10}
+                'partition_num': 1000}
 
         self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions, conf, self.replay_k)
 
