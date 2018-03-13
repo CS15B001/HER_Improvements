@@ -41,6 +41,9 @@ class Experience(object):
         self.total_steps = conf['steps'] if 'steps' in conf else 100000
         # partition number N, split total size to N part
         self.partition_num = conf['partition_num'] if 'partition_num' in conf else 100
+        self.partition_size = conf['partition_size'] if 'partition_size' in conf else math.floor(self.size / self.partition_num)
+        if 'partition_size' in conf:
+            self.partition_num = math.floor(self.size / self.partition_size)
 
         self.index = 0
         self.record_size = 0
@@ -48,67 +51,12 @@ class Experience(object):
 
         self._experience = {}
         self.priority_queue = BinaryHeap(self.priority_size)
-        self.distributions = self.build_distributions()
 
         # Added in new code
         self.distribution = None
         self.dist_index = 1
 
         self.beta_grad = (1 - self.beta_zero) / (self.total_steps - self.learn_start)
-
-
-    def build_distributions(self):
-        """
-        preprocess pow of rank
-        (rank i) ^ (-alpha) / sum ((rank i) ^ (-alpha))
-        :return: distributions, dict
-        """
-        print("Entered build_distributions")
-        res = {}
-        # This is usually equal to k, the batch size ------  Not true, check the use of this
-        n_partitions = self.partition_num
-        partition_num = 1
-        # each part size
-        # Size of each partition
-        partition_size = math.floor(self.size / n_partitions)
-
-        # The procedure being followed here is that given on Page 13
-        # last line. We divide the whole range into 'k' segments
-        # This has the advantage that the same transition will not be
-        # picked twice in the same batch (Stratified Sampling)
-        for n in range(int(partition_size), self.size + 1, int(partition_size)):
-            if self.learn_start <= n <= self.priority_size:
-                distribution = {}
-                # P(i) = (rank i) ^ (-alpha) / sum ((rank i) ^ (-alpha))
-                pdf = list(
-                    map(lambda x: math.pow(x, -self.alpha), range(1, n + 1))
-                )
-                pdf_sum = math.fsum(pdf)
-                distribution['pdf'] = list(map(lambda x: x / pdf_sum, pdf))
-                # split to k segment, and than uniform sample in each k
-                # set k = batch_size, each segment has total probability is 1 / batch_size
-                # strata_ends keep each segment start pos and end pos
-
-                # The following code creates strata_ends such that 
-                # strata_ends[i]-strata_ends[0] = (i-1)*1/batch_size probability
-                cdf = np.cumsum(distribution['pdf'])
-                strata_ends = {1: 0, self.batch_size + 1: n}
-                step = 1 / self.batch_size
-                index = 1
-                for s in range(2, self.batch_size + 1):
-                    while cdf[index] < step:
-                        index += 1
-                    strata_ends[s] = index
-                    step += 1 / self.batch_size
-
-                distribution['strata_ends'] = strata_ends
-
-                res[partition_num] = distribution
-
-            partition_num += 1
-
-        print("Exiting build_distributions")
-        return res
 
 
     # Return the correct distribution, build if required
@@ -119,18 +67,13 @@ class Experience(object):
             raise Exception('Elements have been illegally deleted from the priority_queue in rank_based')
         else:
             res = {}
-            # This is usually equal to k, the batch size ------  Not true, check the use of this
-            n_partitions = self.partition_num
             partition_num = dist_index
-            # each part size
-            # Size of each partition
-            partition_size = math.floor(self.size / n_partitions)
 
             # The procedure being followed here is that given on Page 13
             # last line. We divide the whole range into 'k' segments
             # This has the advantage that the same transition will not be
             # picked twice in the same batch (Stratified Sampling)
-            n = partition_num * partition_size
+            n = partition_num * self.partition_size
 
             if self.learn_start <= n <= self.priority_size:
                 distribution = {}
