@@ -25,30 +25,51 @@ def make_sample_her_transitions(replay_strategy, replay_k, reward_fun):
     def _sample_her_transitions(episode_batch, priority_queue, batch_size_in_transitions, global_step):
         """priority_queue is an instance of type 'Experience' defined in rank_based.py
         """
-
+        batch_size = batch_size_in_transitions
         # Sample from the given priority_queue
         # global_step represents the step of the learning process needed for annealing the bias
         sample_transitions, w, rank_e_id = priority_queue.sample(global_step)
 
         # sample_transitions is now a list of transitions, convert it to the usual {key: batch X dim_key}
         keys = sample_transitions[0].keys()
+        # print("Keys in _sample_her_transitions are: "+str(keys))
         transitions = {}
         for key in keys:
             # Initialize for all the keys
             transitions[key] = []
+
+            # Remove
+            debug_count = 0
+
             # Add transitions one by one to the list
             for single_transition in range(len(sample_transitions)):
+                ##################################
+                if key not in sample_transitions[single_transition].keys():
+                    print("Ran into problems in her_per. Keys are: "+str(sample_transitions[single_transition].keys()))
+                    print("The transition is: "+str(sample_transitions[single_transition]))
+                    print("Debug Count is: "+str(debug_count))
+                else:
+                    debug_count += 1
+                ##################################
                 transitions[key].append(sample_transitions[single_transition][key])
             transitions[key] = np.array(transitions[key])
 
         # transitions is now of the expected format, need to add rewards
         # Re-compute reward since we may have substituted the goal.
+
+        # Reconstruct info dictionary for reward  computation.
+        info = {}
+        for key, value in transitions.items():
+            if key.startswith('info_'):
+                info[key.replace('info_', '')] = value
+
+        # print("The keys in transitions are: "+str(transitions.keys()))
         reward_params = {k: transitions[k] for k in ['ag_2', 'g']}
         reward_params['info'] = info
         transitions['r'] = reward_fun(**reward_params)
 
         transitions = {k: transitions[k].reshape(batch_size, *transitions[k].shape[1:])
-                       for k in transitions.keys()}                  
+                       for k in transitions.keys()}   
 
         # Check if the batch_size returned is the one expected
         assert(transitions['u'].shape[0] == batch_size_in_transitions), "Unexpected batch size returned by rank_based.py"

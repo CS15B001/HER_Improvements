@@ -64,6 +64,8 @@ class Experience(object):
         if (dist_index == self.dist_index) and self.dist_index > 1:
             return self.distribution
         elif dist_index < self.dist_index:
+            # print("Dist_index is: "+str(dist_index))
+            # print("Self.dist_index is: "+str(self.dist_index))
             raise Exception('Elements have been illegally deleted from the priority_queue in rank_based')
         else:
             res = {}
@@ -235,7 +237,7 @@ class Experience(object):
         # dist_index will always be the last partition after the replay
         # buffer is full. If it is not full, it will represent some
         # partition number less than that
-        # print("Values are (record_size, size, partition_num)::"+str(self.record_size)+"::"+str(self.size)+"::"+str(self.partition_num))
+        # print("(In rank_based_new.py) Values are (record_size, size, partition_num)::"+str(self.record_size)+"::"+str(self.size)+"::"+str(self.partition_num))
         dist_index = math.floor(self.record_size / self.size * self.partition_num)
         # dist_index = max(math.floor(self.record_size / self.size * self.partition_num)+1, self.partition_num)
         # issue 1 by @camigord

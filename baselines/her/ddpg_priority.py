@@ -99,10 +99,10 @@ class DDPG(object):
         # conf represents the parameters required for initializing the priority_queue
         # Remember: The bias gets annealed only conf.total_steps number of times
         conf = {'size': self.buffer_size,
-                'learn_start': 256,
-                'batch_size': 256,
+                'learn_start': self.batch_size,
+                'batch_size': self.batch_size,
                 # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
-                'partition_num': 1000}
+                'partition_size': 500}
 
         self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions, conf, self.replay_k)
 
@@ -226,12 +226,15 @@ class DDPG(object):
         transitions['o'], transitions['g'] = self._preprocess_og(o, ag, g)
         transitions['o_2'], transitions['g_2'] = self._preprocess_og(o_2, ag_2, g)
 
+        # # Remove
+        # print("Stage Shape keys in sample_batch are: "+str(self.stage_shapes.keys()))
+
         transitions_batch = [transitions[key] for key in self.stage_shapes.keys()]
 
         # Updates the priorities of the sampled transitions in the priority queue
         self.buffer.update_priority(rank_e_id, priorities)
 
-        return transitions_batch, priorities
+        return transitions_batch
 
     def get_priorities(self, transitions):
         pi_target = self.target.pi_tf
@@ -244,6 +247,8 @@ class DDPG(object):
         u = transitions['u']
         g = transitions['g']
         r = transitions['r']
+        # Check this with Srikanth
+        ag = transitions['ag']
 
         priorities = np.zeros(o.shape[0])
 
@@ -276,8 +281,12 @@ class DDPG(object):
     def stage_batch(self, batch=None):
         if batch is None:
             batch = self.sample_batch()
-        assert len(self.buffer_ph_tf) == len(batch)
+            # print("Batch type is: "+str(type(batch)))
+            # print("Batch Shape is: "+str(len(batch)))
+            # print(str(type(batch[0])))
+        assert len(self.buffer_ph_tf) == len(batch), "Expected: "+str(len(self.buffer_ph_tf))+" Got: "+str(len(batch))
         self.sess.run(self.stage_op, feed_dict=dict(zip(self.buffer_ph_tf, batch)))
+        # print("Completed stage batch")
 
     def train(self, stage=True):
         if stage:

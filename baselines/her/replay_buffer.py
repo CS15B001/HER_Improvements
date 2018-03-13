@@ -101,14 +101,18 @@ class ReplayBuffer:
             for t in range(batch_size):
                 for time_step in range(self.T):
                     transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
+
+                    # This is done at sample time in the original code, we are doing it here
+                    transition['ag_2'] = episode_batch['ag'][t, time_step+1]
+                    transition['o_2'] = episode_batch['o'][t, time_step+1]
                     # Store in the priority_queue
                     self.priority_queue.store(transition)
                     fake_transition = transition
             
-            #########Remove
-            for i in range(1000):
-                self.priority_queue.store(fake_transition)
-            #########
+            # #########Remove
+            # for i in range(1000):
+            #     self.priority_queue.store(fake_transition)
+            # #########
 
             # These are transitions with alternate goals
             for t in range(batch_size):
@@ -121,6 +125,11 @@ class ReplayBuffer:
                         future_ag = episode_batch['ag'][t, future_time_step]
                         transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
                         transition['g'] = future_ag
+                        
+                        # This is done at sample time in the original code, we are doing it here
+                        transition['ag_2'] = episode_batch['ag'][t, time_step+1]
+                        transition['o_2'] = episode_batch['o'][t, time_step+1]
+                        
                         # Store in the priority_queue
                         self.priority_queue.store(transition)
 
