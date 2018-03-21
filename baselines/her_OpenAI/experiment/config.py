@@ -5,8 +5,8 @@ import os
 import gym
 
 from baselines import logger
-from baselines.her.ddpg_priority import DDPG
-from baselines.her.her_per import make_sample_her_transitions
+from baselines.her.ddpg import DDPG
+from baselines.her.her import make_sample_her_transitions
 
 
 DEFAULT_ENV_PARAMS = {
@@ -32,9 +32,9 @@ DEFAULT_PARAMS = {
     'scope': 'ddpg',  # can be tweaked for testing
     'relative_goals': False,
     # training
-    'n_cycles': 5,  # per epoch
+    'n_cycles': 50,  # per epoch
     'rollout_batch_size': 2,  # per mpi thread
-    'n_batches': 5,  # training batches per cycle
+    'n_batches': 40,  # training batches per cycle
     'batch_size': 256,  # per mpi thread, measured in transitions and reduced to even multiple of chunk_length.
     'n_test_rollouts': 10,  # number of test rollouts per epoch, each consists of rollout_batch_size rollouts
     'test_with_polyak': False,  # run test episodes with the target network
@@ -47,7 +47,6 @@ DEFAULT_PARAMS = {
     # normalization
     'norm_eps': 0.01,  # epsilon used for observation normalization
     'norm_clip': 5,  # normalized observations are cropped to this values
-    'uniform_priority':True # false => prioritized replay
 }
 
 
@@ -69,8 +68,6 @@ def prepare_params(kwargs):
     ddpg_params = dict()
 
     env_name = kwargs['env_name']
-
-    # Make changes here if environment other than OpenAI needs to be used
     def make_env():
         return gym.make(env_name)
     kwargs['make_env'] = make_env
@@ -89,7 +86,7 @@ def prepare_params(kwargs):
                  'polyak', 
                  'batch_size', 'Q_lr', 'pi_lr',
                  'norm_eps', 'norm_clip', 'max_u',
-                 'action_l2', 'clip_obs', 'scope', 'relative_goals', 'uniform_priority']:
+                 'action_l2', 'clip_obs', 'scope', 'relative_goals']:
         ddpg_params[name] = kwargs[name]
         kwargs['_' + name] = kwargs[name]
         del kwargs[name]
@@ -107,6 +104,9 @@ def configure_her(params):
     env = cached_make_env(params['make_env'])
     env.reset()
     def reward_fun(ag_2, g, info):  # vectorized
+        # f = open('reward_debug.txt', 'a')
+        # f.write(str(ag_2)+"::"+str(g)+"::"+str(info)+"\n")
+        # f.close()
         return env.compute_reward(achieved_goal=ag_2, desired_goal=g, info=info)
 
     # Prepare configuration for HER.
@@ -131,7 +131,6 @@ def configure_ddpg(dims, params, reuse=False, use_mpi=True, clip_return=True):
     sample_her_transitions = configure_her(params)
     # Extract relevant parameters.
     gamma = params['gamma']
-    replay_k = params['_replay_k']
     rollout_batch_size = params['rollout_batch_size']
     ddpg_params = params['ddpg_params']
 
@@ -148,7 +147,6 @@ def configure_ddpg(dims, params, reuse=False, use_mpi=True, clip_return=True):
                         'subtract_goals': simple_goal_subtract,
                         'sample_transitions': sample_her_transitions,
                         'gamma': gamma,
-                        'replay_k': replay_k,
                         })
     ddpg_params['info'] = {
         'env_name': params['env_name'],

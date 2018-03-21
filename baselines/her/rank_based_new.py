@@ -214,7 +214,7 @@ class Experience(object):
             self.priority_queue.update(math.fabs(delta[i]), indices[i])
 
     # if batch_size argument is passed, use that, else use the one at __init__
-    def sample(self, global_step, batch_size=32):
+    def sample(self, global_step, uniform_priority, batch_size=32):
         """
         sample a mini batch from experience replay
         :param global_step: now training step
@@ -254,32 +254,43 @@ class Experience(object):
         rank_list = []
         # sample from k segments
 
-        # This is stratified sampling. Each segment represents a probability
-        # of 1/self.batch_size and we sample once from each segment
-        # index represents which rank to choose, (1,n)
-        for n in range(1, self.batch_size + 1):
-            if distribution['strata_ends'][n] + 1 >= distribution['strata_ends'][n + 1]:
-                index = distribution['strata_ends'][n + 1]
-            else:
-                # print("The values are: "+str(distribution['strata_ends'][n] + 1)+"::"+str(distribution['strata_ends'][n + 1]))
-                index = random.randint(distribution['strata_ends'][n] + 1,
-                                       distribution['strata_ends'][n + 1])
-            rank_list.append(index)
 
-        # beta, increase by global_step (the current training step), max 1
-        # This is linear annealing mentioned in section 3.4
-        beta = min(self.beta_zero + (global_step - self.learn_start - 1) * self.beta_grad, 1)
-        # find all alpha pow, notice that pdf is a list, start from 0
-        alpha_pow = [distribution['pdf'][v - 1] for v in rank_list]
-        # w = (N * P(i)) ^ (-beta) / max w
-        # This equation is metioned in equation 3.4
-        w = np.power(np.array(alpha_pow) * partition_max, -beta)
-        w_max = max(w)
-        w = np.divide(w, w_max)
-        # rank list is priority id
-        # convert to experience id
+        if uniform_priority==True:
+        	for i in range(1, self.batch_size + 1):
+        		index = random.randint(1,distribution['strata_ends'][self.batch_size]+1)
+        		rank_list.append(index)
+        	w = np.ones(self.batch_size)
+
+        else:
+	        # This is stratified sampling. Each segment represents a probability
+	        # of 1/self.batch_size and we sample once from each segment
+	        # index represents which rank to choose, (1,n)
+	        for n in range(1, self.batch_size + 1):
+	            if distribution['strata_ends'][n] + 1 >= distribution['strata_ends'][n + 1]:
+	                index = distribution['strata_ends'][n + 1]
+	            else:
+	                # print("The values are: "+str(distribution['strata_ends'][n] + 1)+"::"+str(distribution['strata_ends'][n + 1]))
+	                index = random.randint(distribution['strata_ends'][n] + 1,
+	                                       distribution['strata_ends'][n + 1])
+	            rank_list.append(index)
+
+	        # beta, increase by global_step (the current training step), max 1
+	        # This is linear annealing mentioned in section 3.4
+	        beta = min(self.beta_zero + (global_step - self.learn_start - 1) * self.beta_grad, 1)
+	        # find all alpha pow, notice that pdf is a list, start from 0
+	        alpha_pow = [distribution['pdf'][v - 1] for v in rank_list]
+	        # w = (N * P(i)) ^ (-beta) / max w
+	        # This equation is metioned in equation 3.4
+	        w = np.power(np.array(alpha_pow) * partition_max, -beta)
+	        w_max = max(w)
+	        w = np.divide(w, w_max)
+	        # rank list is priority id
+	        # convert to experience id
 
         # This gives all the experience_IDs based on the priority (node numbers)
+        # file_obj = open("rank_list","a")
+        # file_obj.write(str(rank_list)+"\n")
+        # file_obj.close()
         rank_e_id = self.priority_queue.priority_to_experience(rank_list)
         # get experience id according rank_e_id
         experience = self.retrieve(rank_e_id)

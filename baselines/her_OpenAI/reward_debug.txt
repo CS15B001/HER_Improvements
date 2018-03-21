@@ -1,0 +1,126 @@
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (100,)
+Are reward and info the same: False
+The shape of the reward is: (100,)
+The shape of goals is: (100, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+
+Keys of reward params are: dict_keys(['g', 'info', 'ag_2'])
+Shape of info is: (256,)
+Are reward and info the same: False
+The shape of the reward is: (256,)
+The shape of goals is: (256, 3)
+New Observation
+

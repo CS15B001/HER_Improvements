@@ -22,13 +22,13 @@ def make_sample_her_transitions(replay_strategy, replay_k, reward_fun):
         future_p = 0
 
     # def _sample_her_transitions(episode_batch, batch_size_in_transitions):
-    def _sample_her_transitions(episode_batch, priority_queue, batch_size_in_transitions, global_step):
+    def _sample_her_transitions(episode_batch, priority_queue, batch_size_in_transitions, global_step, uniform_priority):
         """priority_queue is an instance of type 'Experience' defined in rank_based.py
         """
         batch_size = batch_size_in_transitions
         # Sample from the given priority_queue
         # global_step represents the step of the learning process needed for annealing the bias
-        sample_transitions, w, rank_e_id = priority_queue.sample(global_step)
+        sample_transitions, w, rank_e_id = priority_queue.sample(global_step, uniform_priority)
 
         # sample_transitions is now a list of transitions, convert it to the usual {key: batch X dim_key}
         keys = sample_transitions[0].keys()

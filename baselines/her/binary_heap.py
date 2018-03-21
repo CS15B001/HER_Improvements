@@ -271,4 +271,6 @@ class BinaryHeap(object):
         """
         # The priority ids are just the node numbers
         # Retrieve the experience ids from the node numbers
+
+        
         return [self.p2e[i] for i in priority_ids]

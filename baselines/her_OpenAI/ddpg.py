@@ -10,7 +10,6 @@ from baselines.her.util import (
 from baselines.her.normalizer import Normalizer
 from baselines.her.replay_buffer import ReplayBuffer
 from baselines.common.mpi_adam import MpiAdam
-from baselines.her.experiment import config
 
 
 def dims_to_shapes(input_dims):
@@ -22,7 +21,7 @@ class DDPG(object):
     def __init__(self, input_dims, buffer_size, hidden, layers, network_class, polyak, batch_size,
                  Q_lr, pi_lr, norm_eps, norm_clip, max_u, action_l2, clip_obs, scope, T,
                  rollout_batch_size, subtract_goals, relative_goals, clip_pos_returns, clip_return,
-                 sample_transitions, gamma, replay_k, reuse=False, **kwargs):
+                 sample_transitions, gamma, reuse=False, **kwargs):
         """Implementation of DDPG that is used in combination with Hindsight Experience Replay (HER).
 
         Args:
@@ -55,8 +54,6 @@ class DDPG(object):
         if self.clip_return is None:
             self.clip_return = np.inf
 
-        # Create the actor critic networks. network_class is defined in actor_critic.py
-        # This class is assigned to network_class when DDPG objest is created
         self.create_actor_critic = import_function(self.network_class)
 
         input_shapes = dims_to_shapes(self.input_dims)
@@ -70,14 +67,12 @@ class DDPG(object):
             if key.startswith('info_'):
                 continue
             stage_shapes[key] = (None, *input_shapes[key])
-        # Next state (o_2) and goal at next state (g_2)
         for key in ['o', 'g']:
             stage_shapes[key + '_2'] = stage_shapes[key]
         stage_shapes['r'] = (None,)
         self.stage_shapes = stage_shapes
 
-        # Create network
-        # Staging area is a datatype in tf to input data into GPUs
+        # Create network.
         with tf.variable_scope(self.scope):
             self.staging_tf = StagingArea(
                 dtypes=[tf.float32 for _ in self.stage_shapes.keys()],
@@ -88,32 +83,18 @@ class DDPG(object):
 
             self._create_network(reuse=reuse)
 
-        # Configure the replay buffer
+        # Configure the replay buffer.
         buffer_shapes = {key: (self.T if key != 'o' else self.T+1, *input_shapes[key])
                          for key, val in input_shapes.items()}
         buffer_shapes['g'] = (buffer_shapes['g'][0], self.dimg)
         buffer_shapes['ag'] = (self.T+1, self.dimg)
 
         buffer_size = (self.buffer_size // self.rollout_batch_size) * self.rollout_batch_size
-
-        # conf represents the parameters required for initializing the priority_queue
-        # Remember: The bias gets annealed only conf.total_steps number of times
-        conf = {'size': self.buffer_size,
-                'learn_start': self.batch_size,
-                'batch_size': self.batch_size,
-                # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
-                'partition_size': (self.replay_k+1)*100}}
-
-        self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions, conf, self.replay_k)
-
-        # global_steps represents the number of batches used for updates
-        self.global_step = 0
+        self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions)
 
     def _random_action(self, n):
         return np.random.uniform(low=-self.max_u, high=self.max_u, size=(n, self.dimu))
 
-    # Preprocessing by clipping the goal and state variables
-    # Not sure about the relative_goal part
     def _preprocess_og(self, o, ag, g):
         if self.relative_goals:
             g_shape = g.shape
@@ -125,11 +106,6 @@ class DDPG(object):
         g = np.clip(g, -self.clip_obs, self.clip_obs)
         return o, g
 
-    # target is the target policy network and main is the one which is updated
-    # target is updated by moving the parameters towards that of the main
-    # pi_tf is the output of the policy network, Q_pi_tf is the output of the Q network used for training pi_tf
-    # i.e., Q_pi_tf uses the pi_tf's action to evaluate the value 
-    # While just Q_tf uses the action which was actually taken
     def get_actions(self, o, ag, g, noise_eps=0., random_eps=0., use_target_net=False,
                     compute_Q=False):
         o, g = self._preprocess_og(o, ag, g)
@@ -170,11 +146,6 @@ class DDPG(object):
 
         self.buffer.store_episode(episode_batch)
 
-        # Updating stats
-
-        ## Change this--------------
-        update_stats = False
-        ###--------------------------
         if update_stats:
             # add transitions to normalizer
             episode_batch['o_2'] = episode_batch['o'][:, 1:, :]
@@ -209,89 +180,25 @@ class DDPG(object):
         ])
         return critic_loss, actor_loss, Q_grad, pi_grad
 
-    # Adam update for Q and pi networks
     def _update(self, Q_grad, pi_grad):
         self.Q_adam.update(Q_grad, self.Q_lr)
         self.pi_adam.update(pi_grad, self.pi_lr)
 
-    # Sample a batch for mini batch gradient descent, already defined in replay_buffer.py
     def sample_batch(self):
-        # Increment the global step
-        self.global_step += 1
-
-        transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
-        priorities = self.get_priorities(transitions)
+        transitions = self.buffer.sample(self.batch_size)
         o, o_2, g = transitions['o'], transitions['o_2'], transitions['g']
         ag, ag_2 = transitions['ag'], transitions['ag_2']
         transitions['o'], transitions['g'] = self._preprocess_og(o, ag, g)
         transitions['o_2'], transitions['g_2'] = self._preprocess_og(o_2, ag_2, g)
 
-        # # Remove
-        # print("Stage Shape keys in sample_batch are: "+str(self.stage_shapes.keys()))
-
         transitions_batch = [transitions[key] for key in self.stage_shapes.keys()]
-
-        # Updates the priorities of the sampled transitions in the priority queue
-        self.buffer.update_priority(rank_e_id, priorities)
-
         return transitions_batch
-
-    def get_priorities(self, transitions):
-        pi_target = self.target.pi_tf
-        Q_pi_target = self.target.Q_pi_tf
-        Q_main = self.main.Q_tf
-
-
-        o = transitions['o']
-        o_2 = transitions['o_2']
-        u = transitions['u']
-        g = transitions['g']
-        r = transitions['r']
-        # Check this with Srikanth
-        ag = transitions['ag']
-
-        priorities = np.zeros(o.shape[0])
-
-        # file_obj = open("priorities_print","a")
-        for i in range(o.shape[0]):
-            o_2_i = np.clip(o_2[i], -self.clip_obs, self.clip_obs)
-            o_i, g_i = self._preprocess_og(o[i], ag[i], g[i])
-            u_i = u[i]
-
-            # Not sure about the o_2_i.size // self.dimo. I guess we need not pass one at a time
-            feed_target = {
-                self.target.o_tf: o_2_i.reshape(-1, self.dimo),
-                self.target.g_tf: g_i.reshape(-1, self.dimg),
-                self.target.u_tf: np.zeros((o_2_i.size // self.dimo, self.dimu), dtype=np.float32)
-            }
-
-            # u_tf for main network is just the action taken at that state
-            feed_main = {
-                self.main.o_tf: o_i.reshape(-1, self.dimo),
-                self.main.g_tf: g_i.reshape(-1, self.dimg),
-                self.main.u_tf: u_i.reshape(-1, self.dimu)
-            }
-
-            TD = r[i] + self.gamma*self.sess.run(Q_pi_target, feed_dict=feed_target) - self.sess.run(Q_main, feed_dict=feed_main)
-
-            priorities[i] = abs(TD)
-
-            text = str(TD)
-            # file_obj.write(text)
-        # file_obj.close()
-
-        return priorities
-
 
     def stage_batch(self, batch=None):
         if batch is None:
             batch = self.sample_batch()
-            # print("Batch type is: "+str(type(batch)))
-            # print("Batch Shape is: "+str(len(batch)))
-            # print(str(type(batch[0])))
-        assert len(self.buffer_ph_tf) == len(batch), "Expected: "+str(len(self.buffer_ph_tf))+" Got: "+str(len(batch))
+        assert len(self.buffer_ph_tf) == len(batch)
         self.sess.run(self.stage_op, feed_dict=dict(zip(self.buffer_ph_tf, batch)))
-        # print("Completed stage batch")
 
     def train(self, stage=True):
         if stage:
@@ -341,7 +248,7 @@ class DDPG(object):
                                 for i, key in enumerate(self.stage_shapes.keys())])
         batch_tf['r'] = tf.reshape(batch_tf['r'], [-1, 1])
 
-        # Create main and target networks, each will have a pi_tf, Q_tf and Q_pi_tf
+        # networks
         with tf.variable_scope('main') as vs:
             if reuse:
                 vs.reuse_variables()
@@ -379,14 +286,9 @@ class DDPG(object):
         self.pi_adam = MpiAdam(self._vars('main/pi'), scale_grad_by_procs=False)
 
         # polyak averaging
-        # 'main/Q' is a way of communicating the scope of the variables
-        # _vars has a way to understand this
         self.main_vars = self._vars('main/Q') + self._vars('main/pi')
         self.target_vars = self._vars('target/Q') + self._vars('target/pi')
         self.stats_vars = self._global_vars('o_stats') + self._global_vars('g_stats')
-        # Update the networks
-        # target net is updated by using polyak averaging
-        # target net is initialized by just copying the main net
         self.init_target_net_op = list(
             map(lambda v: v[0].assign(v[1]), zip(self.target_vars, self.main_vars)))
         self.update_target_net_op = list(

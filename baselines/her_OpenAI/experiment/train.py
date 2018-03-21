@@ -36,19 +36,12 @@ def train(policy, rollout_worker, evaluator,
     for epoch in range(n_epochs):
         # train
         rollout_worker.clear_history()
-        for i in range(n_cycles):
-            text = "Cycle" + str(i)
-            logger.info(text)
+        for _ in range(n_cycles):
             episode = rollout_worker.generate_rollouts()
-            logger.info("rollout generated")
             policy.store_episode(episode)
-            logger.info("Episode stored")
-            for j in range(n_batches):
-                logger.info("Train step:"+str(j))
+            for _ in range(n_batches):
                 policy.train()
-            logger.info("batch GD updates performed")
             policy.update_target_net()
-            logger.info("Updated target networks")
 
         # test
         evaluator.clear_history()
@@ -138,9 +131,7 @@ def launch(
         logger.warn('****************')
         logger.warn()
 
-    # Added the following line
     dims = config.configure_dims(params)
-    params['replay_k'] = config.DEFAULT_PARAMS['replay_k']
     policy = config.configure_ddpg(dims=dims, params=params, clip_return=clip_return)
 
     rollout_params = {
