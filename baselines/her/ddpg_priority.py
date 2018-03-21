@@ -102,7 +102,7 @@ class DDPG(object):
                 'learn_start': self.batch_size,
                 'batch_size': self.batch_size,
                 # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
-                'partition_size': 500}
+                'partition_size': (self.replay_k+1)*100}
 
         self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions, conf, self.replay_k)
 
