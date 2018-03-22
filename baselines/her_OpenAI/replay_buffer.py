@@ -20,10 +20,6 @@ class ReplayBuffer:
         self.sample_transitions = sample_transitions
 
         # self.buffers is {key: array(size_in_episodes x T or T+1 x dim_key)}
-        f = open('reward_debug.txt', 'a')
-        f.write("\n In Replay Buffer Init\n")
-        f.write("self.size is: "+str(self.size)+"\n")
-        f.close()
         self.buffers = {key: np.empty([self.size, *shape])
                         for key, shape in buffer_shapes.items()}
 
@@ -42,9 +38,6 @@ class ReplayBuffer:
         """Returns a dict {key: array(batch_size x shapes[key])}
         """
         buffers = {}
-        f = open('reward_debug.txt', 'a')
-        f.write("\n In Replay Buffer\n")
-        f.write("self.current_size is: "+str(self.current_size)+"\n")
 
         with self.lock:
             assert self.current_size > 0
@@ -54,14 +47,11 @@ class ReplayBuffer:
         buffers['o_2'] = buffers['o'][:, 1:, :]
         buffers['ag_2'] = buffers['ag'][:, 1:, :]
 
-        f.write("Buffer Size is: "+str(buffers['o'].shape)+"\n")
-
         transitions = self.sample_transitions(buffers, batch_size)
 
         for key in (['r', 'o_2', 'ag_2'] + list(self.buffers.keys())):
             assert key in transitions, "key %s missing from transitions" % key
 
-        f.close()
         return transitions
 
     def store_episode(self, episode_batch):

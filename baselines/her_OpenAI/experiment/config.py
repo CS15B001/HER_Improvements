@@ -5,8 +5,8 @@ import os
 import gym
 
 from baselines import logger
-from baselines.her.ddpg import DDPG
-from baselines.her.her import make_sample_her_transitions
+from baselines.her_OpenAI.ddpg import DDPG
+from baselines.her_OpenAI.her import make_sample_her_transitions
 
 
 DEFAULT_ENV_PARAMS = {
@@ -104,9 +104,6 @@ def configure_her(params):
     env = cached_make_env(params['make_env'])
     env.reset()
     def reward_fun(ag_2, g, info):  # vectorized
-        # f = open('reward_debug.txt', 'a')
-        # f.write(str(ag_2)+"::"+str(g)+"::"+str(info)+"\n")
-        # f.close()
         return env.compute_reward(achieved_goal=ag_2, desired_goal=g, info=info)
 
     # Prepare configuration for HER.

@@ -5,10 +5,10 @@ import tensorflow as tf
 from tensorflow.contrib.staging import StagingArea
 
 from baselines import logger
-from baselines.her.util import (
+from baselines.her_OpenAI.util import (
     import_function, store_args, flatten_grads, transitions_in_episode_batch)
-from baselines.her.normalizer import Normalizer
-from baselines.her.replay_buffer import ReplayBuffer
+from baselines.her_OpenAI.normalizer import Normalizer
+from baselines.her_OpenAI.replay_buffer import ReplayBuffer
 from baselines.common.mpi_adam import MpiAdam
 
 

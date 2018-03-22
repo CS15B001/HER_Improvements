@@ -38,17 +38,17 @@ def train(policy, rollout_worker, evaluator,
         rollout_worker.clear_history()
         for i in range(n_cycles):
             text = "Cycle" + str(i)
-            logger.info(text)
+            # logger.info(text)
             episode = rollout_worker.generate_rollouts()
-            logger.info("rollout generated")
+            # logger.info("rollout generated")
             policy.store_episode(episode)
-            logger.info("Episode stored")
+            # logger.info("Episode stored")
             for j in range(n_batches):
-                logger.info("Train step:"+str(j))
+                # logger.info("Train step:"+str(j))
                 policy.train()
-            logger.info("batch GD updates performed")
+            # logger.info("batch GD updates performed")
             policy.update_target_net()
-            logger.info("Updated target networks")
+            # logger.info("Updated target networks")
 
         # test
         evaluator.clear_history()
