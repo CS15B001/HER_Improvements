@@ -1,0 +1,694 @@
+Logging to /tmp/openai-2018-03-22-18-59-48-858092
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: True
+ddpg_params: {'pi_lr': 0.001, 'layers': 3, 'max_u': 1.0, 'batch_size': 256, 'polyak': 0.95, 'clip_obs': 200.0, 'Q_lr': 0.001, 'action_l2': 1.0, 'uniform_priority': True, 'norm_eps': 0.01, 'relative_goals': False, 'norm_clip': 5, 'buffer_size': 1000000, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'hidden': 256, 'scope': 'ddpg'}
+env_name: FetchReach-v0
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f55047a41e0>
+n_batches: 40
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+
+*** Warning ***
+You are running HER with just a single MPI worker. This will work, but the experiments that we report in Plappert et al. (2018, https://arxiv.org/abs/1802.09464) were obtained with --num_cpu 19. This makes a significant difference and if you are looking to reproduce those results, be aware of this. Please also refer to https://github.com/openai/baselines/issues/314 for further details.
+****************
+
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+-----------------------------------
+| epoch              | 0          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 20.0       |
+| test/mean_Q        | -1.0410334 |
+| test/success_rate  | 0.05       |
+| train/episode      | 20.0       |
+| train/success_rate | 0.0        |
+-----------------------------------
+New best success rate: 0.05. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_0.pkl ...
+-----------------------------------
+| epoch              | 1          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 40.0       |
+| test/mean_Q        | -1.7107697 |
+| test/success_rate  | 0.0        |
+| train/episode      | 40.0       |
+| train/success_rate | 0.0        |
+-----------------------------------
+-----------------------------------
+| epoch              | 2          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 60.0       |
+| test/mean_Q        | -2.0040982 |
+| test/success_rate  | 0.0        |
+| train/episode      | 60.0       |
+| train/success_rate | 0.0        |
+-----------------------------------
+-----------------------------------
+| epoch              | 3          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 80.0       |
+| test/mean_Q        | -2.5285552 |
+| test/success_rate  | 0.0        |
+| train/episode      | 80.0       |
+| train/success_rate | 0.0        |
+-----------------------------------
+----------------------------------
+| epoch              | 4         |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 100.0     |
+| test/mean_Q        | -2.909794 |
+| test/success_rate  | 0.0       |
+| train/episode      | 100.0     |
+| train/success_rate | 0.0       |
+----------------------------------
+-----------------------------------
+| epoch              | 5          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 120.0      |
+| test/mean_Q        | -2.3262331 |
+| test/success_rate  | 0.2        |
+| train/episode      | 120.0      |
+| train/success_rate | 0.05       |
+-----------------------------------
+New best success rate: 0.2. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_5.pkl ...
+----------------------------------
+| epoch              | 6         |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 140.0     |
+| test/mean_Q        | -2.426302 |
+| test/success_rate  | 0.25      |
+| train/episode      | 140.0     |
+| train/success_rate | 0.2       |
+----------------------------------
+New best success rate: 0.25. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 7          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 160.0      |
+| test/mean_Q        | -0.9370613 |
+| test/success_rate  | 0.95       |
+| train/episode      | 160.0      |
+| train/success_rate | 0.3        |
+-----------------------------------
+New best success rate: 0.95. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 8          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 180.0      |
+| test/mean_Q        | -0.8776516 |
+| test/success_rate  | 1.0        |
+| train/episode      | 180.0      |
+| train/success_rate | 0.75       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 9          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 200.0      |
+| test/mean_Q        | -0.7248527 |
+| test/success_rate  | 1.0        |
+| train/episode      | 200.0      |
+| train/success_rate | 1.0        |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 10          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 220.0       |
+| test/mean_Q        | -0.72430855 |
+| test/success_rate  | 1.0         |
+| train/episode      | 220.0       |
+| train/success_rate | 0.95        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_10.pkl ...
+------------------------------------
+| epoch              | 11          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 240.0       |
+| test/mean_Q        | -0.71463037 |
+| test/success_rate  | 1.0         |
+| train/episode      | 240.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 12         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 260.0      |
+| test/mean_Q        | -0.7015545 |
+| test/success_rate  | 1.0        |
+| train/episode      | 260.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 13         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 280.0      |
+| test/mean_Q        | -0.6736635 |
+| test/success_rate  | 1.0        |
+| train/episode      | 280.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 14         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 300.0      |
+| test/mean_Q        | -0.6559756 |
+| test/success_rate  | 1.0        |
+| train/episode      | 300.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 15          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 320.0       |
+| test/mean_Q        | -0.66258425 |
+| test/success_rate  | 1.0         |
+| train/episode      | 320.0       |
+| train/success_rate | 1.0         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_15.pkl ...
+-----------------------------------
+| epoch              | 16         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 340.0      |
+| test/mean_Q        | -0.5758294 |
+| test/success_rate  | 1.0        |
+| train/episode      | 340.0      |
+| train/success_rate | 0.85       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 17         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 360.0      |
+| test/mean_Q        | -0.5492169 |
+| test/success_rate  | 1.0        |
+| train/episode      | 360.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 18         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 380.0      |
+| test/mean_Q        | -0.5385018 |
+| test/success_rate  | 1.0        |
+| train/episode      | 380.0      |
+| train/success_rate | 0.7        |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 19          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 400.0       |
+| test/mean_Q        | -0.51880205 |
+| test/success_rate  | 1.0         |
+| train/episode      | 400.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 20          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 420.0       |
+| test/mean_Q        | -0.49296784 |
+| test/success_rate  | 1.0         |
+| train/episode      | 420.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_20.pkl ...
+-----------------------------------
+| epoch              | 21         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 440.0      |
+| test/mean_Q        | -0.4834899 |
+| test/success_rate  | 1.0        |
+| train/episode      | 440.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 22         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 460.0      |
+| test/mean_Q        | -0.5614147 |
+| test/success_rate  | 1.0        |
+| train/episode      | 460.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 23          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 480.0       |
+| test/mean_Q        | -0.48111957 |
+| test/success_rate  | 1.0         |
+| train/episode      | 480.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 24          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 500.0       |
+| test/mean_Q        | -0.47976533 |
+| test/success_rate  | 1.0         |
+| train/episode      | 500.0       |
+| train/success_rate | 0.95        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 25          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 520.0       |
+| test/mean_Q        | -0.46964306 |
+| test/success_rate  | 1.0         |
+| train/episode      | 520.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_25.pkl ...
+------------------------------------
+| epoch              | 26          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 540.0       |
+| test/mean_Q        | -0.44829637 |
+| test/success_rate  | 1.0         |
+| train/episode      | 540.0       |
+| train/success_rate | 0.95        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 27          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 560.0       |
+| test/mean_Q        | -0.47472566 |
+| test/success_rate  | 1.0         |
+| train/episode      | 560.0       |
+| train/success_rate | 1.0         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 28         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 580.0      |
+| test/mean_Q        | -0.4386414 |
+| test/success_rate  | 1.0        |
+| train/episode      | 580.0      |
+| train/success_rate | 0.9        |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 29          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 600.0       |
+| test/mean_Q        | -0.42751575 |
+| test/success_rate  | 1.0         |
+| train/episode      | 600.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 30         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 620.0      |
+| test/mean_Q        | -0.4500596 |
+| test/success_rate  | 1.0        |
+| train/episode      | 620.0      |
+| train/success_rate | 0.85       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_30.pkl ...
+------------------------------------
+| epoch              | 31          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 640.0       |
+| test/mean_Q        | -0.40322766 |
+| test/success_rate  | 1.0         |
+| train/episode      | 640.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 32          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 660.0       |
+| test/mean_Q        | -0.42014757 |
+| test/success_rate  | 1.0         |
+| train/episode      | 660.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 33          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 680.0       |
+| test/mean_Q        | -0.42909917 |
+| test/success_rate  | 1.0         |
+| train/episode      | 680.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 34         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 700.0      |
+| test/mean_Q        | -0.4235174 |
+| test/success_rate  | 1.0        |
+| train/episode      | 700.0      |
+| train/success_rate | 0.75       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 35          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 720.0       |
+| test/mean_Q        | -0.40272373 |
+| test/success_rate  | 1.0         |
+| train/episode      | 720.0       |
+| train/success_rate | 0.8         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_35.pkl ...
+-----------------------------------
+| epoch              | 36         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 740.0      |
+| test/mean_Q        | -0.4149975 |
+| test/success_rate  | 1.0        |
+| train/episode      | 740.0      |
+| train/success_rate | 0.75       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+----------------------------------
+| epoch              | 37        |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 760.0     |
+| test/mean_Q        | -0.413491 |
+| test/success_rate  | 1.0       |
+| train/episode      | 760.0     |
+| train/success_rate | 0.8       |
+----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 38         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 780.0      |
+| test/mean_Q        | -0.4102122 |
+| test/success_rate  | 1.0        |
+| train/episode      | 780.0      |
+| train/success_rate | 0.75       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 39         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 800.0      |
+| test/mean_Q        | -0.4252708 |
+| test/success_rate  | 1.0        |
+| train/episode      | 800.0      |
+| train/success_rate | 0.8        |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 40          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 820.0       |
+| test/mean_Q        | -0.38801292 |
+| test/success_rate  | 1.0         |
+| train/episode      | 820.0       |
+| train/success_rate | 0.9         |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_40.pkl ...
+------------------------------------
+| epoch              | 41          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 840.0       |
+| test/mean_Q        | -0.36352885 |
+| test/success_rate  | 1.0         |
+| train/episode      | 840.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 42         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 860.0      |
+| test/mean_Q        | -0.3477459 |
+| test/success_rate  | 1.0        |
+| train/episode      | 860.0      |
+| train/success_rate | 0.85       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 43          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 880.0       |
+| test/mean_Q        | -0.38884172 |
+| test/success_rate  | 1.0         |
+| train/episode      | 880.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+-----------------------------------
+| epoch              | 44         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 900.0      |
+| test/mean_Q        | -0.3669249 |
+| test/success_rate  | 1.0        |
+| train/episode      | 900.0      |
+| train/success_rate | 0.8        |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 45          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 920.0       |
+| test/mean_Q        | -0.33295065 |
+| test/success_rate  | 1.0         |
+| train/episode      | 920.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_45.pkl ...
+------------------------------------
+| epoch              | 46          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 940.0       |
+| test/mean_Q        | -0.35797608 |
+| test/success_rate  | 1.0         |
+| train/episode      | 940.0       |
+| train/success_rate | 0.95        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 47          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 960.0       |
+| test/mean_Q        | -0.35550553 |
+| test/success_rate  | 1.0         |
+| train/episode      | 960.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 48          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 980.0       |
+| test/mean_Q        | -0.33402997 |
+| test/success_rate  | 1.0         |
+| train/episode      | 980.0       |
+| train/success_rate | 0.85        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...
+------------------------------------
+| epoch              | 49          |
+| stats_g/mean       | 0.0         |
+| stats_g/std        | 1.0         |
+| stats_o/mean       | 0.0         |
+| stats_o/std        | 1.0         |
+| test/episode       | 1000.0      |
+| test/mean_Q        | -0.34518424 |
+| test/success_rate  | 1.0         |
+| train/episode      | 1000.0      |
+| train/success_rate | 0.95        |
+------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-03-22-18-59-48-858092/policy_best.pkl ...

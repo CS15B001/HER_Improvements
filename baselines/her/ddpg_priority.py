@@ -219,7 +219,7 @@ class DDPG(object):
         # Increment the global step
         self.global_step += 1
 
-        transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step)
+        transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
         priorities = self.get_priorities(transitions)
         o, o_2, g = transitions['o'], transitions['o_2'], transitions['g']
         ag, ag_2 = transitions['ag'], transitions['ag_2']
@@ -252,6 +252,7 @@ class DDPG(object):
 
         priorities = np.zeros(o.shape[0])
 
+        # file_obj = open("priorities_print","a")
         for i in range(o.shape[0]):
             o_2_i = np.clip(o_2[i], -self.clip_obs, self.clip_obs)
             o_i, g_i = self._preprocess_og(o[i], ag[i], g[i])
@@ -274,6 +275,10 @@ class DDPG(object):
             TD = r[i] + self.gamma*self.sess.run(Q_pi_target, feed_dict=feed_target) - self.sess.run(Q_main, feed_dict=feed_main)
 
             priorities[i] = abs(TD)
+
+            text = str(TD)
+            # file_obj.write(text)
+        # file_obj.close()
 
         return priorities
 
