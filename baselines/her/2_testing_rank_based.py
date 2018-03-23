@@ -5,6 +5,9 @@
 # description: 
 
 from baselines.her.rank_based_new import Experience
+import pprint
+
+pp = pprint.PrettyPrinter(indent=4)
 
 
 def test():
@@ -13,8 +16,9 @@ def test():
             # 'partition_size':10,
             'partition_num': 5,
             'total_step': 10000,
-            'batch_size': 2}
+            'batch_size': 5}
     experience = Experience(conf)
+    pp.pprint(experience.distribution)
 
     # insert to experience
     print('test insert experience')
@@ -35,6 +39,7 @@ def test():
     # sample
     print('test sample')
     sample, w, e_id = experience.sample(10)
+    pp.pprint(experience.distribution)
     print(sample)
     print(w)
     print(e_id)

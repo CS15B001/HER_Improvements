@@ -47,7 +47,7 @@ DEFAULT_PARAMS = {
     # normalization
     'norm_eps': 0.01,  # epsilon used for observation normalization
     'norm_clip': 5,  # normalized observations are cropped to this values
-    'uniform_priority':True # false => prioritized replay
+    'uniform_priority':False # false => prioritized replay
 }
 
 
