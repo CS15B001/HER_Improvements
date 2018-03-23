@@ -185,3 +185,8 @@ class ReplayBuffer:
     # Update the priorities of the sampled transitions
     def update_priority(self, rank_e_id, priorities):
         self.priority_queue.update_priority(rank_e_id, priorities)
+        f = open('checking_td_error.txt', 'a')
+        f.write('Transitions\n'+str(rank_e_id)+'Priorities\n'+str(priorities)+'\n')
+        f.write('Max priority is: '+str(self.priority_queue.priority_queue.get_max_priority())+'\n')
+        f.write('Buffer size is: '+str(self.priority_queue.record_size)+'\n')
+        f.close()

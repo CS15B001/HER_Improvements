@@ -155,8 +155,6 @@ class Experience(object):
             # Doubt:: Won't this change the node number where the experience is stored?
             # Shouldn't we update self._experience?
             self.priority_queue.update(priority, insert_index)
-            # Remove
-            print("The size of the buffer is: "+str(self.record_size))
             return True
         else:
             # This happens if replace is set to false and elements

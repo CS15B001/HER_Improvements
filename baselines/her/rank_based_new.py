@@ -214,7 +214,7 @@ class Experience(object):
             self.priority_queue.update(math.fabs(delta[i]), indices[i])
 
     # if batch_size argument is passed, use that, else use the one at __init__
-    def sample(self, global_step, uniform_priority, batch_size=32):
+    def sample(self, global_step, uniform_priority=False, batch_size=32):
         """
         sample a mini batch from experience replay
         :param global_step: now training step

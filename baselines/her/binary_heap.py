@@ -59,7 +59,8 @@ class BinaryHeap(object):
                             + '    ' * int(max_level - now_level)
                 level = now_level
 
-            to_string = to_string + '%.2f ' % self.priority_queue[i][1] + '    ' * int(max_level - now_level)
+            # to_string = to_string + '%.2f ' % self.priority_queue[i][1] + '    ' * int(max_level - now_level)
+            to_string = to_string + '%.2f ' % self.priority_queue[i][1]+'/%.2f ' % self.priority_queue[i][0] + '    ' * int(max_level - now_level)
 
         return to_string
 

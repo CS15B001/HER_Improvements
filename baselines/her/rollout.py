@@ -35,9 +35,9 @@ class RolloutWorker:
         assert self.T > 0
 
         self.info_keys = [key.replace('info_', '') for key in dims.keys() if key.startswith('info_')]
-        file_obj = open("srikanth_keyprint_rollout","w")
-        file_obj.write(str(self.info_keys))
-        file_obj.close()
+        # file_obj = open("srikanth_keyprint_rollout","w")
+        # file_obj.write(str(self.info_keys))
+        # file_obj.close()
 
         self.success_history = deque(maxlen=history_len)
         self.Q_history = deque(maxlen=history_len)
