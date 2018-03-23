@@ -76,6 +76,11 @@ class DDPG(object):
         stage_shapes['r'] = (None,)
         self.stage_shapes = stage_shapes
 
+        # Adding variable for correcting bias - Ameet
+        self.stage_shapes_new = OrderedDict()
+        self.stage_shapes_new['bias'] = (None,)
+        ##############################################
+
         # Create network
         # Staging area is a datatype in tf to input data into GPUs
         with tf.variable_scope(self.scope):
@@ -85,6 +90,15 @@ class DDPG(object):
             self.buffer_ph_tf = [
                 tf.placeholder(tf.float32, shape=shape) for shape in self.stage_shapes.values()]
             self.stage_op = self.staging_tf.put(self.buffer_ph_tf)
+            
+            # Adding bias term from section 3.4 - Ameet
+            self.staging_tf_new = StagingArea(
+                dtypes=[tf.float32 for _ in self.stage_shapes_new.keys()],
+                shapes=list(self.stage_shapes_new.values()))
+            self.buffer_ph_tf_new = [
+                tf.placeholder(tf.float32, shape=shape) for shape in self.stage_shapes_new.values()]
+            self.stage_op_new = self.staging_tf_new.put(self.buffer_ph_tf_new)
+            ############################################
 
             self._create_network(reuse=reuse)
 
@@ -234,7 +248,7 @@ class DDPG(object):
         # Updates the priorities of the sampled transitions in the priority queue
         self.buffer.update_priority(rank_e_id, priorities)
 
-        return transitions_batch
+        return transitions_batch, [w]
 
     def get_priorities(self, transitions):
         pi_target = self.target.pi_tf
@@ -285,18 +299,26 @@ class DDPG(object):
 
     def stage_batch(self, batch=None):
         if batch is None:
-            batch = self.sample_batch()
+            batch, bias = self.sample_batch()
             # print("Batch type is: "+str(type(batch)))
             # print("Batch Shape is: "+str(len(batch)))
             # print(str(type(batch[0])))
         assert len(self.buffer_ph_tf) == len(batch), "Expected: "+str(len(self.buffer_ph_tf))+" Got: "+str(len(batch))
         self.sess.run(self.stage_op, feed_dict=dict(zip(self.buffer_ph_tf, batch)))
+
+        ##### Adding for bias - Ameet
+        assert len(self.buffer_ph_tf_new) == len(bias), "Expected: "+str(len(self.buffer_ph_tf_new))+" Got: "+str(len(bias))
+        self.sess.run(self.stage_op_new, feed_dict=dict(zip(self.buffer_ph_tf_new, bias)))
+        #####
+        
         # print("Completed stage batch")
 
     def train(self, stage=True):
         if stage:
             self.stage_batch()
         critic_loss, actor_loss, Q_grad, pi_grad = self._grads()
+        # print("In ddpg priority:: The shapes of Q_grad and pi_grad are: "+str(Q_grad.shape)+"::"+str(pi_grad.shape))
+        # print("Their types are::"+str(type(Q_grad)))
         self._update(Q_grad, pi_grad)
         return critic_loss, actor_loss
 
@@ -341,6 +363,13 @@ class DDPG(object):
                                 for i, key in enumerate(self.stage_shapes.keys())])
         batch_tf['r'] = tf.reshape(batch_tf['r'], [-1, 1])
 
+        ########### Getting the bias terms - Ameet
+        bias = self.staging_tf_new.get()
+        bias_tf = OrderedDict([(key, bias[i])
+                                for i, key in enumerate(self.stage_shapes_new.keys())])
+        bias_tf['bias'] = tf.reshape(bias_tf['bias'], [-1, 1])
+        #######################################
+
         # Create main and target networks, each will have a pi_tf, Q_tf and Q_pi_tf
         with tf.variable_scope('main') as vs:
             if reuse:
@@ -362,8 +391,12 @@ class DDPG(object):
         target_Q_pi_tf = self.target.Q_pi_tf
         clip_range = (-self.clip_return, 0. if self.clip_pos_returns else np.inf)
         target_tf = tf.clip_by_value(batch_tf['r'] + self.gamma * target_Q_pi_tf, *clip_range)
-        self.Q_loss_tf = tf.reduce_mean(tf.square(tf.stop_gradient(target_tf) - self.main.Q_tf))
-        self.pi_loss_tf = -tf.reduce_mean(self.main.Q_pi_tf)
+        ############## Added for bias - Ameet
+        error = (tf.stop_gradient(target_tf) - self.main.Q_tf) * bias_tf['bias']
+        self.Q_loss_tf = tf.reduce_mean(tf.square(error))
+        self.pi_loss_tf = -tf.reduce_mean(self.main.Q_pi_tf * bias_tf['bias'])
+        ##############
+        # Regularization - L2 - Check - Penalty for taking the best action
         self.pi_loss_tf += self.action_l2 * tf.reduce_mean(tf.square(self.main.pi_tf / self.max_u))
         Q_grads_tf = tf.gradients(self.Q_loss_tf, self._vars('main/Q'))
         pi_grads_tf = tf.gradients(self.pi_loss_tf, self._vars('main/pi'))
@@ -371,6 +404,9 @@ class DDPG(object):
         assert len(self._vars('main/pi')) == len(pi_grads_tf)
         self.Q_grads_vars_tf = zip(Q_grads_tf, self._vars('main/Q'))
         self.pi_grads_vars_tf = zip(pi_grads_tf, self._vars('main/pi'))
+        ################### Shape Info
+        ####Shape of Q_grads_tf is: 8
+        ####Shape of Q_grads_tf[0] is: (17, 256)
         self.Q_grad_tf = flatten_grads(grads=Q_grads_tf, var_list=self._vars('main/Q'))
         self.pi_grad_tf = flatten_grads(grads=pi_grads_tf, var_list=self._vars('main/pi'))
 

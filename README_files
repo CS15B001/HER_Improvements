@@ -2,4 +2,7 @@ baselines
 	her_OpenAI/ 	- This has the original code from repository
 	her /			- This is the modified code
 		rank_based_new.py - This is the file that is currently being used. Has utility to perform uniform sampling.
+
+Models/
+	Has notable .pkl files
 		

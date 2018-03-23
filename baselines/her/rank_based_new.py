@@ -259,6 +259,7 @@ class Experience(object):
         	for i in range(1, self.batch_size + 1):
         		index = random.randint(1,distribution['strata_ends'][self.batch_size]+1)
         		rank_list.append(index)
+            # The following statement is to ensure the there is no bias correction when uniform sampliing is done
         	w = np.ones(self.batch_size)
 
         else:
