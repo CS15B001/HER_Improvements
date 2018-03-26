@@ -58,6 +58,9 @@ class Experience(object):
 
         self.beta_grad = (1 - self.beta_zero) / (self.total_steps - self.learn_start)
 
+        # Debug Code
+        self.debug = {}
+
 
     # Return the correct distribution, build if required
     def return_distribution(self, dist_index):
@@ -162,6 +165,11 @@ class Experience(object):
                 del self._experience[insert_index]
             # Add the newest experience
             self._experience[insert_index] = experience
+
+            ######Debug
+            self._experience[insert_index]['new'] = True
+            ######
+
             # add to priority queue
             # Add it with max priority so that it gets picked as soon as possible
             priority = self.priority_queue.get_max_priority()
@@ -182,9 +190,26 @@ class Experience(object):
         :param indices: list of experience id
         :return: experience replay sample
         """
+        
+        # self.debug['old'] = 0
+        # self.debug['new'] = 0
+
+        # #######Debug
+        # for v in indices:
+        #     if 'new' in self._experience[v].keys():
+        #         self.debug['new'] += 1
+        #         del self._experience[v]['new']
+        #     else:
+        #         self.debug['old'] += 1
+
+        # f = open('new_old_ratio.txt', 'a')
+        # f.write("The ratio is: "+str(float(self.debug['new'])/self.debug['old'])+'\n')
+
+        # #######
 
         # Given a list of Experience_IDs, return the experience
         # it represents
+
         return [self._experience[v] for v in indices]
 
     def rebalance(self):

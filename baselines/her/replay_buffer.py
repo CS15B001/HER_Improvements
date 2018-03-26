@@ -105,6 +105,11 @@ class ReplayBuffer:
                     # This is done at sample time in the original code, we are doing it here
                     transition['ag_2'] = episode_batch['ag'][t, time_step+1]
                     transition['o_2'] = episode_batch['o'][t, time_step+1]
+
+                    ######### This is being done for debugging purposes
+                    transition['is_actual_goal'] = True
+                    ######### Remove this
+
                     # Store in the priority_queue
                     self.priority_queue.store(transition)
                     fake_transition = transition
@@ -129,6 +134,10 @@ class ReplayBuffer:
                         # This is done at sample time in the original code, we are doing it here
                         transition['ag_2'] = episode_batch['ag'][t, time_step+1]
                         transition['o_2'] = episode_batch['o'][t, time_step+1]
+
+                        ######### This is being done for debugging purposes
+                        transition['is_actual_goal'] = False
+                        ######### Remove this
                         
                         # Store in the priority_queue
                         self.priority_queue.store(transition)

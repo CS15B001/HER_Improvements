@@ -122,6 +122,7 @@ class DDPG(object):
 
         # global_steps represents the number of batches used for updates
         self.global_step = 0
+        self.debug = {}
 
     def _random_action(self, n):
         return np.random.uniform(low=-self.max_u, high=self.max_u, size=(n, self.dimu))
@@ -235,6 +236,10 @@ class DDPG(object):
 
         transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
         priorities = self.get_priorities(transitions)
+
+        # ##### Debug function
+        # self.debug_td_error(transitions, priorities)
+        # #####
         o, o_2, g = transitions['o'], transitions['o_2'], transitions['g']
         ag, ag_2 = transitions['ag'], transitions['ag_2']
         transitions['o'], transitions['g'] = self._preprocess_og(o, ag, g)
@@ -249,6 +254,23 @@ class DDPG(object):
         self.buffer.update_priority(rank_e_id, priorities)
 
         return transitions_batch, [w]
+
+
+    # This function is purely for debugging purposes
+    def debug_td_error(self, transitions, priorities):
+        f = open('td_error_debug.txt', 'a')
+        self.debug['actual_goals'] = 0
+        self.debug['alternate_goals'] = 0
+        trans = transitions['is_actual_goal']
+        for t in range(trans.shape[0]):
+            if trans[t]:
+                self.debug['actual_goals'] += 1
+                # f.write('Actual goal transition: '+str(priorities[t])+'\n')
+            else:
+                self.debug['alternate_goals'] += 1
+                # f.write('Alternate goal transition: '+str(priorities[t])+'\n')
+        f.write('Ratio is: '+str(float(self.debug['alternate_goals'])/self.debug['actual_goals'])+'\n')
+        del transitions['is_actual_goal']
 
     def get_priorities(self, transitions):
         pi_target = self.target.pi_tf
@@ -394,7 +416,9 @@ class DDPG(object):
         ############## Added for bias - Ameet
         error = (tf.stop_gradient(target_tf) - self.main.Q_tf) * bias_tf['bias']
         self.Q_loss_tf = tf.reduce_mean(tf.square(error))
-        self.pi_loss_tf = -tf.reduce_mean(self.main.Q_pi_tf * bias_tf['bias'])
+        # self.pi_loss_tf = -tf.reduce_mean(self.main.Q_pi_tf * bias_tf['bias'])
+        # Note that the following statement does not include bias because of the remark in the IEEE paper
+        self.pi_loss_tf = -tf.reduce_mean(self.main.Q_pi_tf)
         ##############
         # Regularization - L2 - Check - Penalty for taking the best action
         self.pi_loss_tf += self.action_l2 * tf.reduce_mean(tf.square(self.main.pi_tf / self.max_u))
