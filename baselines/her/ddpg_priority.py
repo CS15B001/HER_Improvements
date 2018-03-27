@@ -22,7 +22,7 @@ class DDPG(object):
     def __init__(self, input_dims, buffer_size, hidden, layers, network_class, polyak, batch_size,
                  Q_lr, pi_lr, norm_eps, norm_clip, max_u, action_l2, clip_obs, scope, T,
                  rollout_batch_size, subtract_goals, relative_goals, clip_pos_returns, clip_return,
-                 sample_transitions, gamma, replay_k, reuse=False, **kwargs):
+                 sample_transitions, gamma, replay_k, reward_fun, reuse=False, **kwargs):
         """Implementation of DDPG that is used in combination with Hindsight Experience Replay (HER).
 
         Args:
@@ -183,7 +183,15 @@ class DDPG(object):
                        'o' is of size T+1, others are of size T
         """
 
+        ###### Remove the l value - Supposed to be a list of length 2
+        # First entry consists of transitions with actual goals and second is alternate goals
         self.buffer.store_episode(episode_batch)
+
+        # ###### Debug
+        # # This functions was used to check the hypothesis that if TD error is high
+        # # for a state with some goal, it is high for that states with all other goals
+        # self.debug_td_error_alternate_actual(debug_transitions)
+
 
         # Updating stats
 
@@ -206,6 +214,63 @@ class DDPG(object):
 
             self.o_stats.recompute_stats()
             self.g_stats.recompute_stats()
+
+
+    # This function is purely for Debugging purposes
+    def debug_td_error_alternate_actual(self, debug_transitions):
+        actual_transitions, alternate_transitions = debug_transitions[0], debug_transitions[1]
+        actual_transitions, alternate_transitions = self.td_error_convert_to_format(actual_transitions),\
+                                                    self.td_error_convert_to_format(alternate_transitions)
+
+        # Calculated priorities
+        priorities = []
+        priorities.append(self.get_priorities(actual_transitions))
+        priorities.append(self.get_priorities(alternate_transitions))
+
+        f = open('act_alt_goals.txt', 'a')
+
+        # Length of priorities[0] is 100 and priorities[1] is 400
+        for i in range(len(priorities[0])):
+            f.write(str(priorities[0][i])+" : ")
+            for k in range(4):
+                f.write(str(priorities[1][i*self.replay_k+k])+" : ")
+            f.write('\n')
+
+        f.write("Done Storing One Rollout\n\n\n")
+        # f.write('The number of transitions are: '+str(len(priorities[0]))+" :: "+str(len(priorities[1]))+"\n")
+
+
+    # This function is purely for Debugging purposes
+    def td_error_convert_to_format(self, sample_transitions):
+        # sample_transitions is now a list of transitions, convert it to the usual {key: batch X dim_key}
+        keys = sample_transitions[0].keys()
+        # print("Keys in _sample_her_transitions are: "+str(keys))
+        transitions = {}
+        for key in keys:
+            # Initialize for all the keys
+            transitions[key] = []
+
+            # Add transitions one by one to the list
+            for single_transition in range(len(sample_transitions)):
+                transitions[key].append(sample_transitions[single_transition][key])
+            transitions[key] = np.array(transitions[key])
+        
+        # Reconstruct info dictionary for reward  computation.
+        info = {}
+        for key, value in transitions.items():
+            if key.startswith('info_'):
+                info[key.replace('info_', '')] = value
+
+        # print("The keys in transitions are: "+str(transitions.keys()))
+        reward_params = {k: transitions[k] for k in ['ag_2', 'g']}
+        reward_params['info'] = info
+        transitions['r'] = self.reward_fun(**reward_params)
+
+        # transitions = {k: transitions[k].reshape(batch_size, *transitions[k].shape[1:])
+        #                for k in transitions.keys()}
+
+
+        return transitions
 
     def get_current_buffer_size(self):
         return self.buffer.get_current_size()
@@ -271,6 +336,8 @@ class DDPG(object):
                 # f.write('Alternate goal transition: '+str(priorities[t])+'\n')
         f.write('Ratio is: '+str(float(self.debug['alternate_goals'])/self.debug['actual_goals'])+'\n')
         del transitions['is_actual_goal']
+
+    ###### Debug End
 
     def get_priorities(self, transitions):
         pi_target = self.target.pi_tf

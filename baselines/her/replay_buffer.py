@@ -95,9 +95,12 @@ class ReplayBuffer:
 
             # Store the transitions in the priority_queue
             # Slice the episodes to get the transitions
+
+            # ###### Debug
+            # debug_transitions = [[], []]
+            # ###### Remove this
             
             # These are the transitions with the actual goal
-            fake_transition = None
             for t in range(batch_size):
                 for time_step in range(self.T):
                     transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
@@ -112,12 +115,10 @@ class ReplayBuffer:
 
                     # Store in the priority_queue
                     self.priority_queue.store(transition)
-                    fake_transition = transition
-            
-            # #########Remove
-            # for i in range(1000):
-            #     self.priority_queue.store(fake_transition)
-            # #########
+
+                    # ###### Debug
+                    # debug_transitions[0].append(transition)
+                    # ###### Remove this
 
             # These are transitions with alternate goals
             for t in range(batch_size):
@@ -141,6 +142,14 @@ class ReplayBuffer:
                         
                         # Store in the priority_queue
                         self.priority_queue.store(transition)
+
+                        # ###### Debug
+                        # debug_transitions[1].append(transition)
+                        # ###### Remove this
+
+            # ###### Debug
+            # return debug_transitions
+            # ###### Remove this
 
 
     # Size in terms of number of episodes stored in the buffer

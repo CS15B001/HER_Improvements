@@ -140,6 +140,10 @@ def configure_ddpg(dims, params, reuse=False, use_mpi=True, clip_return=True):
     # DDPG agent
     env = cached_make_env(params['make_env'])
     env.reset()
+
+    def reward_fun(ag_2, g, info):  # vectorized
+        return env.compute_reward(achieved_goal=ag_2, desired_goal=g, info=info)
+
     ddpg_params.update({'input_dims': input_dims,  # agent takes an input observations
                         'T': params['T'],
                         'clip_pos_returns': True,  # clip positive returns
@@ -149,6 +153,7 @@ def configure_ddpg(dims, params, reuse=False, use_mpi=True, clip_return=True):
                         'sample_transitions': sample_her_transitions,
                         'gamma': gamma,
                         'replay_k': replay_k,
+                        'reward_fun': reward_fun,
                         })
     ddpg_params['info'] = {
         'env_name': params['env_name'],
