@@ -14,6 +14,8 @@ cd baselines
 pip install -e .
 ```
 
+[Weekly Report for Project](https://www.overleaf.com/14513279ybtsxrddgdjb#/55642837/)
+
 - [A2C](baselines/a2c)
 - [ACER](baselines/acer)
 - [ACKTR](baselines/acktr)
