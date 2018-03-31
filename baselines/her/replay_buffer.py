@@ -6,7 +6,7 @@ from baselines.her.rank_based_new import Experience
 
 
 class ReplayBuffer:
-    def __init__(self, buffer_shapes, size_in_transitions, T, sample_transitions, conf, replay_k):
+    def __init__(self, buffer_shapes, size_in_transitions, T, sample_transitions, conf, replay_k, n_reps):
         """Creates a replay buffer.
 
         Args:
@@ -23,6 +23,7 @@ class ReplayBuffer:
         self.T = T
         self.sample_transitions = sample_transitions
         self.replay_k = replay_k
+        self.n_reps = n_reps
 
         # self.buffers is {key: array(size_in_episodes x T or T+1 x dim_key)} - OpenAI comment
         # The keys are 'o', 'g', 'ag' etc. dim_key represents the dimensionality of the 
@@ -91,7 +92,7 @@ class ReplayBuffer:
                 self.buffers[key][idxs] = episode_batch[key]
 
             # Total number of transitions includes each time step
-            self.n_transitions_stored += batch_size * self.T
+            self.n_transitions_stored += batch_size * self.T*(self.replay_k+1)*self.n_reps
 
             # Store the transitions in the priority_queue
             # Slice the episodes to get the transitions
@@ -99,57 +100,59 @@ class ReplayBuffer:
             # ###### Debug
             # debug_transitions = [[], []]
             # ###### Remove this
+
+            for _ in range(self.n_reps):
             
-            # These are the transitions with the actual goal
-            for t in range(batch_size):
-                for time_step in range(self.T):
-                    transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
-
-                    # This is done at sample time in the original code, we are doing it here
-                    transition['ag_2'] = episode_batch['ag'][t, time_step+1]
-                    transition['o_2'] = episode_batch['o'][t, time_step+1]
-
-                    ######### This is being done for debugging purposes
-                    transition['is_actual_goal'] = True
-                    ######### Remove this
-
-                    # Store in the priority_queue
-                    self.priority_queue.store(transition)
-
-                    # ###### Debug
-                    # debug_transitions[0].append(transition)
-                    # ###### Remove this
-
-            # These are transitions with alternate goals
-            for t in range(batch_size):
-                for time_step in range(self.T):
-                    future_offset = np.random.uniform(size=self.replay_k) * (self.T - time_step)
-                    future_offset = [elem.astype(int) for elem in future_offset]
-                    future_t = [(time_step + 1 + elem) for elem in future_offset]
-                    
-                    for future_time_step in future_t:
-                        future_ag = episode_batch['ag'][t, future_time_step]
+                # These are the transitions with the actual goal
+                for t in range(batch_size):
+                    for time_step in range(self.T):
                         transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
-                        transition['g'] = future_ag
-                        
+
                         # This is done at sample time in the original code, we are doing it here
                         transition['ag_2'] = episode_batch['ag'][t, time_step+1]
                         transition['o_2'] = episode_batch['o'][t, time_step+1]
 
                         ######### This is being done for debugging purposes
-                        transition['is_actual_goal'] = False
+                        transition['is_actual_goal'] = True
                         ######### Remove this
-                        
+
                         # Store in the priority_queue
                         self.priority_queue.store(transition)
 
                         # ###### Debug
-                        # debug_transitions[1].append(transition)
+                        # debug_transitions[0].append(transition)
                         # ###### Remove this
 
-            # ###### Debug
-            # return debug_transitions
-            # ###### Remove this
+                # These are transitions with alternate goals
+                for t in range(batch_size):
+                    for time_step in range(self.T):
+                        future_offset = np.random.uniform(size=self.replay_k) * (self.T - time_step)
+                        future_offset = [elem.astype(int) for elem in future_offset]
+                        future_t = [(time_step + 1 + elem) for elem in future_offset]
+                        
+                        for future_time_step in future_t:
+                            future_ag = episode_batch['ag'][t, future_time_step]
+                            transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
+                            transition['g'] = future_ag
+                            
+                            # This is done at sample time in the original code, we are doing it here
+                            transition['ag_2'] = episode_batch['ag'][t, time_step+1]
+                            transition['o_2'] = episode_batch['o'][t, time_step+1]
+
+                            ######### This is being done for debugging purposes
+                            transition['is_actual_goal'] = False
+                            ######### Remove this
+                            
+                            # Store in the priority_queue
+                            self.priority_queue.store(transition)
+
+                            # ###### Debug
+                            # debug_transitions[1].append(transition)
+                            # ###### Remove this
+
+                # ###### Debug
+                # return debug_transitions
+                # ###### Remove this
 
 
     # Size in terms of number of episodes stored in the buffer

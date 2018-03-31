@@ -48,6 +48,7 @@ DEFAULT_PARAMS = {
     'norm_eps': 0.01,  # epsilon used for observation normalization
     'norm_clip': 5,  # normalized observations are cropped to this values
     'uniform_priority':False # false => prioritized replay
+    'n_reps': 5 # Number of replicas with the actual goal stored at each time step an episode
 }
 
 
@@ -89,7 +90,7 @@ def prepare_params(kwargs):
                  'polyak', 
                  'batch_size', 'Q_lr', 'pi_lr',
                  'norm_eps', 'norm_clip', 'max_u',
-                 'action_l2', 'clip_obs', 'scope', 'relative_goals', 'uniform_priority']:
+                 'action_l2', 'clip_obs', 'scope', 'relative_goals', 'uniform_priority', 'n_reps']:
         ddpg_params[name] = kwargs[name]
         kwargs['_' + name] = kwargs[name]
         del kwargs[name]
