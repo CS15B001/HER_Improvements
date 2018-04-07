@@ -126,9 +126,10 @@ class ReplayBuffer:
                 # These are transitions with alternate goals
                 for t in range(batch_size):
                     for time_step in range(self.T):
-                        future_offset = np.random.uniform(size=self.replay_k) * (self.T - time_step)
-                        future_offset = [elem.astype(int) for elem in future_offset]
-                        future_t = [(time_step + 1 + elem) for elem in future_offset]
+                        future_t = self._sample_alt_goals(time_step)
+                        # future_offset = np.random.uniform(size=self.replay_k) * (self.T - time_step)
+                        # future_offset = [elem.astype(int) for elem in future_offset]
+                        # future_t = [(time_step + 1 + elem) for elem in future_offset]
                         
                         for future_time_step in future_t:
                             future_ag = episode_batch['ag'][t, future_time_step]
@@ -153,6 +154,20 @@ class ReplayBuffer:
                 # ###### Debug
                 # return debug_transitions
                 # ###### Remove this
+
+
+    def _sample_alt_goals(self, time_step):
+        # Sample 2*k*(T - t)/(T+1) number of alt goals
+        # Sample uniformly the above number of alt goals
+
+        size_t = int(2*self.replay_k*(self.T - time_step)/(self.T+1))
+
+        future_offset = np.random.uniform(size=size_t)*(self.T - time_step)
+        future_offset = [elem.astype(int) for elem in future_offset]
+        future_t = [(time_step + 1 + elem) for elem in future_offset]
+
+        return future_t
+
 
 
     # Size in terms of number of episodes stored in the buffer
