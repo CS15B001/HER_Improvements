@@ -34,7 +34,7 @@ DEFAULT_PARAMS = {
     # training
     'n_cycles': 10,  # per epoch
     'rollout_batch_size': 2,  # per mpi thread
-    'n_batches': 10,  # training batches per cycle
+    'n_batches': 50,  # training batches per cycle
     'batch_size': 256,  # per mpi thread, measured in transitions and reduced to even multiple of chunk_length.
     'n_test_rollouts': 10,  # number of test rollouts per epoch, each consists of rollout_batch_size rollouts
     'test_with_polyak': False,  # run test episodes with the target network
@@ -48,7 +48,7 @@ DEFAULT_PARAMS = {
     'norm_eps': 0.01,  # epsilon used for observation normalization
     'norm_clip': 5,  # normalized observations are cropped to this values
     'uniform_priority':False, # false => prioritized replay
-    'n_reps': 5 # Number of replicas with the actual goal stored at each time step an episode
+    'n_reps': 1 # Number of replicas with the actual goal stored at each time step an episode
 }
 
 
