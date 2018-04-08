@@ -22,7 +22,7 @@ class DDPG(object):
     def __init__(self, input_dims, buffer_size, hidden, layers, network_class, polyak, batch_size,
                  Q_lr, pi_lr, norm_eps, norm_clip, max_u, action_l2, clip_obs, scope, T,
                  rollout_batch_size, subtract_goals, relative_goals, clip_pos_returns, clip_return,
-                 sample_transitions, gamma, replay_k, reward_fun, reuse=False, **kwargs):
+                 sample_transitions, gamma, replay_k, reward_fun=None, reuse=False, **kwargs):
         """Implementation of DDPG that is used in combination with Hindsight Experience Replay (HER).
 
         Args:
@@ -116,7 +116,7 @@ class DDPG(object):
                 'learn_start': self.batch_size,
                 'batch_size': self.batch_size,
                 # Using some heuristic to set the partition_num as it matters only when the buffer is not full (unlikely)
-                'partition_size': (self.replay_k+1)*100}
+                'partition_size': (self.replay_k)*100}
 
         self.buffer = ReplayBuffer(buffer_shapes, buffer_size, self.T, self.sample_transitions, conf, self.replay_k)
 

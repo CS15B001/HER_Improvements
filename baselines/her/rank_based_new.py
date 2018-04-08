@@ -174,9 +174,8 @@ class Experience(object):
             # Add it with max priority so that it gets picked as soon as possible
             priority = self.priority_queue.get_max_priority()
             # Update the node where the new experience was inserted
-            # Doubt:: Won't this change the node number where the experience is stored?
-            # Shouldn't we update self._experience?
             self.priority_queue.update(priority, insert_index)
+            # print('The buffer size is: '+str(self.record_size))
             return True
         else:
             # This happens if replace is set to false and elements
@@ -271,6 +270,7 @@ class Experience(object):
         
         ############################
         # distribution = self.distributions[dist_index]
+        # print("Dist Index is: "+str(dist_index))
         distribution = self.return_distribution(dist_index)
         ############################
 

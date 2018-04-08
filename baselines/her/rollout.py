@@ -167,8 +167,8 @@ class RolloutWorker:
     def save_policy(self, path):
         """Pickles the current policy for later inspection.
         """
-        # with open(path, 'wb') as f:
-        #     pickle.dump(self.policy, f)
+        with open(path, 'wb') as f:
+            pickle.dump(self.policy, f)
 
     def logs(self, prefix='worker'):
         """Generates a dictionary that contains all collected statistics.

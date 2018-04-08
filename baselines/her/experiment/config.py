@@ -153,7 +153,7 @@ def configure_ddpg(dims, params, reuse=False, use_mpi=True, clip_return=True):
                         'sample_transitions': sample_her_transitions,
                         'gamma': gamma,
                         'replay_k': replay_k,
-                        'reward_fun': reward_fun,
+                        # 'reward_fun': reward_fun,
                         })
     ddpg_params['info'] = {
         'env_name': params['env_name'],
