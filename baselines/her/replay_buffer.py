@@ -160,7 +160,9 @@ class ReplayBuffer:
         # Sample 2*k*(T - t)/(T+1) number of alt goals
         # Sample uniformly the above number of alt goals
 
-        size_t = round(2*self.replay_k*(self.T - time_step)/(self.T+1))
+        size_t = round(2*self.replay_k*(self.T - time_step)/(self.T+1)) + 1
+
+        print(size_t)
 
         future_offset = np.random.uniform(size=size_t)*(self.T - time_step)
         future_offset = [elem.astype(int) for elem in future_offset]
