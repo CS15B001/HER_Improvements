@@ -4,6 +4,8 @@ import numpy as np
 
 from baselines.her.rank_based_new import Experience
 
+import copy
+
 
 class ReplayBuffer:
     def __init__(self, buffer_shapes, size_in_transitions, T, sample_transitions, conf, replay_k):
@@ -33,8 +35,14 @@ class ReplayBuffer:
         self.buffers = {key: np.empty([self.size, *shape])
                         for key, shape in buffer_shapes.items()}
 
+        # self.queue_ratio contains the number of initial transitions in a batch which belong to the actual goals
+        self.queue_ratio = int(1./(self.replay_k+1)*conf['batch_size'])
+        conf = [copy.deepcopy(conf), copy.deepcopy(conf)]
+        conf[0]['partition_size'], conf[0]['learn_start'], conf[0]['batch_size'] = 1*100-1, self.queue_ratio, self.queue_ratio 
+        conf[1]['partition_size'], conf[1]['learn_start'], conf[1]['batch_size'] = self.replay_k*100-1, conf[1]['batch_size'] - self.queue_ratio, conf[1]['batch_size'] - self.queue_ratio
+        # Unlike before, self.priority_queue is now a list
         # Alternate Buffer - Priority Queue
-        self.priority_queue = Experience(conf)
+        self.priority_queue = [Experience(conf[i]) for i in range(2)]
 
         # memory management
         self.current_size = 0
@@ -62,12 +70,24 @@ class ReplayBuffer:
         buffers['ag_2'] = buffers['ag'][:, 1:, :]
 
         # ToDo: Replace the last argument with global_step
-        transitions, w, rank_e_id = self.sample_transitions(buffers, self.priority_queue, batch_size, global_step, uniform_priority)
+        batch_size = [self.queue_ratio, batch_size-self.queue_ratio]
+        transitions, w, rank_e_id = [[None, None] for _ in range(3)]
+        transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+        transitions[1], w[1], rank_e_id[1] = self.sample_transitions(buffers, self.priority_queue[1], batch_size[1], global_step, uniform_priority)    
+
+        # Combine the two transitions
+        transitions_ = {}
+        w_, rank_e_id_ = [np.hstack((w[0], w[1])), rank_e_id[0] + rank_e_id[1]]
+        for key in transitions[0].keys():
+            if len(transitions[0][key].shape) > 1:
+                transitions_[key] = np.vstack((transitions[0][key], transitions[1][key]))
+            else:
+                transitions_[key] = np.hstack((transitions[0][key], transitions[1][key]))
 
         for key in (['r', 'o_2', 'ag_2'] + list(self.buffers.keys())):
-            assert key in transitions, "key %s missing from transitions. In replay_buffer.py" % key
+            assert key in transitions_, "key %s missing from transitions. In replay_buffer.py" % key
 
-        return transitions, w, rank_e_id
+        return transitions_, w_, rank_e_id_
 
     def store_episode(self, episode_batch):
         """episode_batch: array(batch_size x (T or T+1) x dim_key)
@@ -113,8 +133,8 @@ class ReplayBuffer:
                     transition['is_actual_goal'] = True
                     ######### Remove this
 
-                    # Store in the priority_queue
-                    self.priority_queue.store(transition)
+                    # Store in the priority_queue - The one which stores the actual goals
+                    self.priority_queue[0].store(transition)
 
                     # ###### Debug
                     # debug_transitions[0].append(transition)
@@ -140,8 +160,8 @@ class ReplayBuffer:
                         transition['is_actual_goal'] = False
                         ######### Remove this
                         
-                        # Store in the priority_queue
-                        self.priority_queue.store(transition)
+                        # Store in the priority_queue - The one which stores the actual goals
+                        self.priority_queue[1].store(transition)
 
                         # ###### Debug
                         # debug_transitions[1].append(transition)
@@ -202,7 +222,8 @@ class ReplayBuffer:
 
     # Update the priorities of the sampled transitions
     def update_priority(self, rank_e_id, priorities):
-        self.priority_queue.update_priority(rank_e_id, priorities)
+        self.priority_queue[0].update_priority(rank_e_id[:self.queue_ratio], priorities[:self.queue_ratio])
+        self.priority_queue[1].update_priority(rank_e_id[self.queue_ratio:], priorities[self.queue_ratio:])
         # f = open('checking_td_error.txt', 'a')
         # f.write('Transitions\n'+str(rank_e_id)+'Priorities\n'+str(priorities)+'\n')
         # f.write('Max priority is: '+str(self.priority_queue.priority_queue.get_max_priority())+'\n')
