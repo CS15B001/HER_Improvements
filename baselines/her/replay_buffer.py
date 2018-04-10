@@ -162,7 +162,7 @@ class ReplayBuffer:
 
         size_t = round(2*self.replay_k*(self.T - time_step)/(self.T+1)) + 1
 
-        print(size_t)
+        # print(size_t)
 
         future_offset = np.random.uniform(size=size_t)*(self.T - time_step)
         future_offset = [elem.astype(int) for elem in future_offset]

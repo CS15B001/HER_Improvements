@@ -247,7 +247,7 @@ class Experience(object):
         :return: w, list, weights
         :return: rank_e_id, list, samples id, used for update priority
         """
-        print("record_size",self.record_size, "learn_start",self.learn_start)
+        # print("record_size",self.record_size, "learn_start",self.learn_start)
 
         if self.record_size < self.learn_start:
             # Store a minimum of self.learn_start number of experiences before starting
@@ -271,8 +271,8 @@ class Experience(object):
         partition_size = math.floor(self.size / self.partition_num)
         partition_max = dist_index * partition_size
         
-        print("dist_index",dist_index, "partition_size",self.partition_size, "partition_num",self.partition_num,
-            "priority_size",self.priority_size, "batch_size",self.batch_size)
+        # print("dist_index",dist_index, "partition_size",self.partition_size, "partition_num",self.partition_num,
+            # "priority_size",self.priority_size, "batch_size",self.batch_size)
 
         ############################
         # distribution = self.distributions[dist_index]

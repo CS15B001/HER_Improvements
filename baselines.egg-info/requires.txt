@@ -1,4 +1,4 @@
-gym[mujoco,atari,classic_control,robotics]
+gym[atari,classic_control,mujoco,robotics]
 scipy
 tqdm
 joblib
