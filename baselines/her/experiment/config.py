@@ -43,12 +43,12 @@ DEFAULT_PARAMS = {
     'noise_eps': 0.2,  # std of gaussian noise added to not-completely-random actions as a percentage of max_u
     # HER
     'replay_strategy': 'future',  # supported modes: future, none
-    'replay_k': 4,  # number of additional goals used for replay, only used if off_policy_data=future
+    'replay_k': 6,  # number of additional goals used for replay, only used if off_policy_data=future
     # normalization
     'norm_eps': 0.01,  # epsilon used for observation normalization
     'norm_clip': 5,  # normalized observations are cropped to this values
     'uniform_priority':False, # false => prioritized replay
-    'n_reps': 2,              # Maintains the self.replay_k ratio but appends the actual goal n_reps number of times
+    'n_reps': 1,              # Maintains the self.replay_k ratio but appends the actual goal n_reps number of times
     'nonuniform_sampling': True     # Samples number of goals based on how far the time-step is from the end of the episode
 }
 

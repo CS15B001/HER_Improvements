@@ -1,0 +1,444 @@
+Logging to /tmp/openai-2018-04-16-22-35-23-738056
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 10
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'buffer_size': 1000000, 'layers': 3, 'uniform_priority': False, 'relative_goals': False, 'scope': 'ddpg', 'norm_clip': 5, 'batch_size': 256, 'norm_eps': 0.01, 'action_l2': 1.0, 'pi_lr': 0.001, 'clip_obs': 200.0, 'Q_lr': 0.001, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'n_reps': 10, 'hidden': 256, 'polyak': 0.95, 'max_u': 1.0, 'nonuniform_sampling': True}
+env_name: FetchReach-v0
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f301204b0d0>
+n_batches: 40
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+
+*** Warning ***
+You are running HER with just a single MPI worker. This will work, but the experiments that we report in Plappert et al. (2018, https://arxiv.org/abs/1802.09464) were obtained with --num_cpu 19. This makes a significant difference and if you are looking to reproduce those results, be aware of this. Please also refer to https://github.com/openai/baselines/issues/314 for further details.
+****************
+
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-16 22:35:23.860424: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Training...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 0          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 20.0       |
+| test/mean_Q        | -1.1284405 |
+| test/success_rate  | 0.0        |
+| train/episode      | 20.0       |
+| train/success_rate | 0.05       |
+-----------------------------------
+New best success rate: 0.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_0.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 1          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 40.0       |
+| test/mean_Q        | -1.7033126 |
+| test/success_rate  | 0.0        |
+| train/episode      | 40.0       |
+| train/success_rate | 0.0        |
+-----------------------------------
+New best success rate: 0.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 2          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 60.0       |
+| test/mean_Q        | -2.0700457 |
+| test/success_rate  | 0.0        |
+| train/episode      | 60.0       |
+| train/success_rate | 0.05       |
+-----------------------------------
+New best success rate: 0.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+----------------------------------
+| epoch              | 3         |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 80.0      |
+| test/mean_Q        | -2.193424 |
+| test/success_rate  | 0.0       |
+| train/episode      | 80.0      |
+| train/success_rate | 0.0       |
+----------------------------------
+New best success rate: 0.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 4          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 100.0      |
+| test/mean_Q        | -2.7115479 |
+| test/success_rate  | 0.0        |
+| train/episode      | 100.0      |
+| train/success_rate | 0.05       |
+-----------------------------------
+New best success rate: 0.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 5          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 120.0      |
+| test/mean_Q        | -3.2575011 |
+| test/success_rate  | 0.05       |
+| train/episode      | 120.0      |
+| train/success_rate | 0.0        |
+-----------------------------------
+New best success rate: 0.05. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_5.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 6          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 140.0      |
+| test/mean_Q        | -3.5289757 |
+| test/success_rate  | 0.05       |
+| train/episode      | 140.0      |
+| train/success_rate | 0.0        |
+-----------------------------------
+New best success rate: 0.05. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+----------------------------------
+| epoch              | 7         |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 160.0     |
+| test/mean_Q        | -2.892883 |
+| test/success_rate  | 0.1       |
+| train/episode      | 160.0     |
+| train/success_rate | 0.3       |
+----------------------------------
+New best success rate: 0.1. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 8          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 180.0      |
+| test/mean_Q        | -1.4010557 |
+| test/success_rate  | 0.75       |
+| train/episode      | 180.0      |
+| train/success_rate | 0.15       |
+-----------------------------------
+New best success rate: 0.75. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 9          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 200.0      |
+| test/mean_Q        | -1.3492177 |
+| test/success_rate  | 0.7        |
+| train/episode      | 200.0      |
+| train/success_rate | 0.6        |
+-----------------------------------
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 10         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 220.0      |
+| test/mean_Q        | -1.0240037 |
+| test/success_rate  | 1.0        |
+| train/episode      | 220.0      |
+| train/success_rate | 0.85       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_10.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+-----------------------------------
+| epoch              | 11         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 240.0      |
+| test/mean_Q        | -0.8946322 |
+| test/success_rate  | 1.0        |
+| train/episode      | 240.0      |
+| train/success_rate | 0.95       |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-04-16-22-35-23-738056/policy_best.pkl ...
+Total number of transitions added: 100
+Total number of transitions added: 4100
+Total number of transitions added: 100
+Total number of transitions added: 4100
+

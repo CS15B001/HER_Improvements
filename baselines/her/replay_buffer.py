@@ -113,7 +113,7 @@ class ReplayBuffer:
                 self.buffers[key][idxs] = episode_batch[key]
 
             # Total number of transitions includes each time step
-            self.n_transitions_stored += batch_size * self.T*(self.replay_k+1)*self.n_reps
+            self.n_transitions_stored += (batch_size * self.T*(self.replay_k*self.n_reps+1))
 
             # Store the transitions in the priority_queue
             # Slice the episodes to get the transitions
@@ -126,61 +126,62 @@ class ReplayBuffer:
             count = 0
             
             # These are the transitions with the actual goal
-            for _ in range(self.n_reps):
-                for t in range(batch_size):
-                    for time_step in range(self.T):
-                        transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
-
-                        # This is done at sample time in the original code, we are doing it here
-                        transition['ag_2'] = episode_batch['ag'][t, time_step+1]
-                        transition['o_2'] = episode_batch['o'][t, time_step+1]
-
-                        ######### This is being done for debugging purposes
-                        transition['is_actual_goal'] = True
-                        ######### Remove this
-
-                        # Store in the priority_queue - The one which stores the actual goals
-                        self.priority_queue[0].store(transition)
-                        count += 1
-
-                        # ###### Debug
-                        # debug_transitions[0].append(transition)
-                        # ###### Remove this
-
-            print("Total number of transitions added: "+str(count))
-
-            # These are transitions with alternate goals
             for t in range(batch_size):
                 for time_step in range(self.T):
-                    if self.nonuniform_sampling:
-                        future_t = self._sample_alt_goals(time_step)
-                    else:
-                        future_offset = np.random.uniform(size=self.replay_k*self.n_reps) * (self.T - time_step)
-                        future_offset = [elem.astype(int) for elem in future_offset]
-                        future_t = [(time_step + 1 + elem) for elem in future_offset]
-                    
-                    for future_time_step in future_t:
-                        future_ag = episode_batch['ag'][t, future_time_step]
-                        transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
-                        transition['g'] = future_ag
+                    transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
+
+                    # This is done at sample time in the original code, we are doing it here
+                    transition['ag_2'] = episode_batch['ag'][t, time_step+1]
+                    transition['o_2'] = episode_batch['o'][t, time_step+1]
+
+                    ######### This is being done for debugging purposes
+                    transition['is_actual_goal'] = True
+                    ######### Remove this
+
+                    # Store in the priority_queue - The one which stores the actual goals
+                    self.priority_queue[0].store(transition)
+                    count += 1
+
+                    # ###### Debug
+                    # debug_transitions[0].append(transition)
+                    # ###### Remove this
+
+            # print("Total number of transitions added: "+str(count))
+
+            # Add more number of alternate goals
+            for _ in range(self.n_reps):
+                # These are transitions with alternate goals
+                for t in range(batch_size):
+                    for time_step in range(self.T):
+                        if self.nonuniform_sampling:
+                            future_t = self._sample_alt_goals(time_step)
+                        else:
+                            future_offset = np.random.uniform(size=self.replay_k) * (self.T - time_step)
+                            future_offset = [elem.astype(int) for elem in future_offset]
+                            future_t = [(time_step + 1 + elem) for elem in future_offset]
                         
-                        # This is done at sample time in the original code, we are doing it here
-                        transition['ag_2'] = episode_batch['ag'][t, time_step+1]
-                        transition['o_2'] = episode_batch['o'][t, time_step+1]
+                        for future_time_step in future_t:
+                            future_ag = episode_batch['ag'][t, future_time_step]
+                            transition = {key: episode_batch[key][t, time_step] for key in episode_batch.keys()}
+                            transition['g'] = future_ag
+                            
+                            # This is done at sample time in the original code, we are doing it here
+                            transition['ag_2'] = episode_batch['ag'][t, time_step+1]
+                            transition['o_2'] = episode_batch['o'][t, time_step+1]
 
-                        ######### This is being done for debugging purposes
-                        transition['is_actual_goal'] = False
-                        ######### Remove this
-                        
-                        # Store in the priority_queue - The one which stores the actual goals
-                        self.priority_queue[1].store(transition)
-                        count += 1
+                            ######### This is being done for debugging purposes
+                            transition['is_actual_goal'] = False
+                            ######### Remove this
+                            
+                            # Store in the priority_queue - The one which stores the actual goals
+                            self.priority_queue[1].store(transition)
+                            count += 1
 
-                        # ###### Debug
-                        # debug_transitions[1].append(transition)
-                        # ###### Remove this
+                            # ###### Debug
+                            # debug_transitions[1].append(transition)
+                            # ###### Remove this
 
-            print("Total number of transitions added: "+str(count))
+            # print("Total number of transitions added: "+str(count))
 
             # ###### Debug
             # return debug_transitions
@@ -190,7 +191,7 @@ class ReplayBuffer:
         # Sample 2*k*(T - t)/(T+1) number of alt goals
         # Sample uniformly the above number of alt goals
 
-        size_t = round(2*self.replay_k*self.n_reps*(self.T - time_step)/(self.T+1)) + 1
+        size_t = round(2*self.replay_k*(self.T - time_step)/(self.T+1))
 
         # print(size_t)
 
