@@ -5,9 +5,9 @@ import datetime
 
 # Mention the experiments that need to be run here
 time_of_run = str(datetime.datetime.fromtimestamp(time.time()).strftime('%m_%d_%H_%M_%S'))
-batch_size = [256, 256]
-replay_k = [4,6]
-env_name = ['FetchReach-v1', 'FetchReach-v1']
+batch_size = [256, 512]
+replay_k = [4,6,8]
+env_name = ['FetchReach-v1', 'FetchSlide-v1']
 num_cpus = 12
 
 # Run all the experiments
