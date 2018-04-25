@@ -1,0 +1,36 @@
+nohup: ignoring input
+--------------------------------------------------------------------------
+[[58996,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 13, in <module>
+    from baselines.her.rollout import RolloutWorker
+  File "/home/gsarma8/HER_Improvements/baselines/her/rollout.py", line 5, in <module>
+    from mujoco_py import MujocoException
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/mujoco_py/__init__.py", line 1, in <module>
+    from mujoco_py.builder import cymj, ignore_mujoco_warnings, functions, MujocoException
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/mujoco_py/builder.py", line 468, in <module>
+    cymj = load_cython_ext(mjpro_path)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/mujoco_py/builder.py", line 68, in load_cython_ext
+    _ensure_set_env_var("LD_LIBRARY_PATH", lib_path)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/mujoco_py/builder.py", line 101, in _ensure_set_env_var
+    var_name, var_name, lib_path))
+Exception: 
+Missing path to your environment variable. 
+Current values LD_LIBRARY_PATH=:/home/ubuntu/.mujoco/mjpro150/bin:/home/ubuntu/.mujoco/mjpro150/bin:/home/ubuntu/.mujoco/mjpro150/bin:/home/ubuntu/.mujoco/mjpro150/bin
+Please add following line to .bashrc:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/gsarma8/.mujoco/mjpro150/bin

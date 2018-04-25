@@ -1,0 +1,41 @@
+nohup: ignoring input
+--------------------------------------------------------------------------
+[[36997,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 12, in <module>
+    import baselines.her.experiment.config as config
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/config.py", line 8, in <module>
+    from baselines.her.ddpg_priority import DDPG
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 4, in <module>
+    import tensorflow as tf
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import *  # pylint: disable=redefined-builtin
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/__init__.py", line 72, in <module>
+    from tensorflow.python.ops.standard_ops import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/ops/standard_ops.py", line 26, in <module>
+    from tensorflow.python.ops import array_grad
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/ops/array_grad.py", line 36, in <module>
+    @ops.RegisterGradient("Pack")
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py", line 2324, in __call__
+    _gradient_registry.register(f, self._op_type)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/framework/registry.py", line 67, in register
+    stack = traceback.extract_stack()
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/traceback.py", line 207, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/traceback.py", line 339, in extract
+    for f, lineno in frame_gen:
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/traceback.py", line 295, in walk_stack
+    yield f, f.f_lineno
+KeyboardInterrupt

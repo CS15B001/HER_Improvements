@@ -1,0 +1,29 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 5, in <module>
+    import numpy as np
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/__init__.py", line 142, in <module>
+    from . import add_newdocs
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/add_newdocs.py", line 13, in <module>
+    from numpy.lib import add_newdoc
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/lib/__init__.py", line 8, in <module>
+    from .type_check import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/lib/type_check.py", line 11, in <module>
+    import numpy.core.numeric as _nx
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/core/__init__.py", line 74, in <module>
+    from numpy.testing import _numpy_tester
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/numpy/testing/__init__.py", line 10, in <module>
+    from unittest import TestCase
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/unittest/__init__.py", line 64, in <module>
+    from .main import TestProgram, main
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/unittest/main.py", line 7, in <module>
+    from . import loader, runner
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/unittest/runner.py", line 8, in <module>
+    from .signals import registerResult
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 962, in _find_and_load_unlocked
+KeyboardInterrupt

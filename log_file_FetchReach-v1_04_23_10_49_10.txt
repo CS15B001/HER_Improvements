@@ -1,0 +1,55 @@
+nohup: ignoring input
+--------------------------------------------------------------------------
+[[62753,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 12, in <module>
+    import baselines.her.experiment.config as config
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/config.py", line 8, in <module>
+    from baselines.her.ddpg_priority import DDPG
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 5, in <module>
+    from tensorflow.contrib.staging import StagingArea
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/__init__.py", line 35, in <module>
+    from tensorflow.contrib import distributions
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/distributions/__init__.py", line 38, in <module>
+    from tensorflow.contrib.distributions.python.ops.estimator import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/distributions/python/ops/estimator.py", line 21, in <module>
+    from tensorflow.contrib.learn.python.learn.estimators.head import _compute_weighted_loss
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/__init__.py", line 95, in <module>
+    from tensorflow.contrib.learn.python.learn import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/__init__.py", line 28, in <module>
+    from tensorflow.contrib.learn.python.learn import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/__init__.py", line 28, in <module>
+    from tensorflow.contrib.learn.python.learn import basic_session_run_hooks
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/basic_session_run_hooks.py", line 41, in <module>
+    basic_session_run_hooks.CheckpointSaverHook)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/util/deprecation.py", line 147, in deprecated_alias
+    class NewClass(func_or_class):  # pylint: disable=missing-docstring
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/util/deprecation.py", line 154, in NewClass
+    __module__ = _call_location(outer=True)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/util/deprecation.py", line 73, in _call_location
+    frame = tf_inspect.currentframe()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/python/util/tf_inspect.py", line 29, in currentframe
+    return _inspect.stack()[1][0]
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/inspect.py", line 1464, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/inspect.py", line 1441, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/inspect.py", line 1414, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/inspect.py", line 756, in findsource
+    module = getmodule(object, file)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/inspect.py", line 709, in getmodule
+    if ismodule(module) and hasattr(module, '__file__'):
+KeyboardInterrupt

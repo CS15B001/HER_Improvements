@@ -1,0 +1,850 @@
+--------------------------------------------------------------------------
+[[44724,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+--------------------------------------------------------------------------
+[[44640,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+[her-fetch-instance:03243] 11 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[her-fetch-instance:03243] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2018-04-23 14:11:12.552724: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-23 14:11:12.552757: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-23 14:11:12.592115: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-23 14:11:12.601273: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-601810
+Logging to /tmp/openai-2018-04-23-14-11-12-601795
+Logging to /tmp/openai-2018-04-23-14-11-12-601881
+Logging to /tmp/openai-2018-04-23-14-11-12-601986
+2018-04-23 14:11:12.623848: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-624637
+2018-04-23 14:11:12.631838: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-632655
+2018-04-23 14:11:12.687918: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-688959
+2018-04-23 14:11:12.692687: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-04-23 14:11:12.692754: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-693511
+Logging to /tmp/openai-2018-04-23-14-11-12-693493
+2018-04-23 14:11:12.718398: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-719363
+2018-04-23 14:11:12.734796: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-735727
+2018-04-23 14:11:12.737998: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-23-14-11-12-738801
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'Q_lr': 0.001, 'norm_eps': 0.01, 'hidden': 256, 'max_u': 1.0, 'norm_clip': 5, 'relative_goals': False, 'batch_size': 512, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'polyak': 0.95, 'pi_lr': 0.001, 'n_reps': 1, 'nonuniform_sampling': True, 'buffer_size': 1000000, 'clip_obs': 200.0, 'scope': 'ddpg', 'action_l2': 1.0, 'layers': 3}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fa70f72b9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_batch_size: 512
+_buffer_size: 1000000
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_pi_lr: 0.001
+_polyak: 0.95
+_polyak: 0.95
+_relative_goals: False
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'max_u': 1.0, 'relative_goals': False, 'pi_lr': 0.001, 'hidden': 256, 'norm_clip': 5, 'scope': 'ddpg', 'network_class': 'baselines.her.actor_critic:ActorCritic', 'buffer_size': 1000000, 'Q_lr': 0.001, 'action_l2': 1.0, 'clip_obs': 200.0, 'norm_eps': 0.01, 'polyak': 0.95, 'n_reps': 1, 'batch_size': 512, 'nonuniform_sampling': True, 'layers': 3, 'uniform_priority': False}
+env_name: FetchPush-v1
+ddpg_params: {'polyak': 0.95, 'norm_clip': 5, 'max_u': 1.0, 'relative_goals': False, 'batch_size': 512, 'action_l2': 1.0, 'buffer_size': 1000000, 'layers': 3, 'pi_lr': 0.001, 'Q_lr': 0.001, 'nonuniform_sampling': True, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'n_reps': 1, 'hidden': 256, 'scope': 'ddpg', 'norm_eps': 0.01, 'clip_obs': 200.0}
+env_name: FetchPush-v1
+gamma: 0.98
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fcd0eb4d9d8>
+n_batches: 40
+make_env: <function prepare_params.<locals>.make_env at 0x7f68fa1ec9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'Q_lr': 0.001, 'action_l2': 1.0, 'layers': 3, 'clip_obs': 200.0, 'hidden': 256, 'relative_goals': False, 'uniform_priority': False, 'norm_clip': 5, 'scope': 'ddpg', 'network_class': 'baselines.her.actor_critic:ActorCritic', 'n_reps': 1, 'buffer_size': 1000000, 'pi_lr': 0.001, 'nonuniform_sampling': True, 'max_u': 1.0, 'batch_size': 512, 'polyak': 0.95, 'norm_eps': 0.01}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f2bcaf8a9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'network_class': 'baselines.her.actor_critic:ActorCritic', 'clip_obs': 200.0, 'uniform_priority': False, 'buffer_size': 1000000, 'polyak': 0.95, 'action_l2': 1.0, 'batch_size': 512, 'n_reps': 1, 'max_u': 1.0, 'layers': 3, 'norm_eps': 0.01, 'Q_lr': 0.001, 'nonuniform_sampling': True, 'hidden': 256, 'pi_lr': 0.001, 'norm_clip': 5, 'scope': 'ddpg', 'relative_goals': False}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fbd3fa4b9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'clip_obs': 200.0, 'batch_size': 512, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'norm_clip': 5, 'buffer_size': 1000000, 'hidden': 256, 'uniform_priority': False, 'layers': 3, 'action_l2': 1.0, 'Q_lr': 0.001, 'pi_lr': 0.001, 'norm_eps': 0.01, 'relative_goals': False, 'polyak': 0.95, 'n_reps': 1, 'nonuniform_sampling': True, 'max_u': 1.0}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f029430d9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'buffer_size': 1000000, 'clip_obs': 200.0, 'batch_size': 512, 'uniform_priority': False, 'Q_lr': 0.001, 'nonuniform_sampling': True, 'max_u': 1.0, 'hidden': 256, 'layers': 3, 'polyak': 0.95, 'action_l2': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_clip': 5, 'norm_eps': 0.01, 'scope': 'ddpg', 'pi_lr': 0.001, 'n_reps': 1, 'relative_goals': False}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fc16644a9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'buffer_size': 1000000, 'max_u': 1.0, 'clip_obs': 200.0, 'layers': 3, 'norm_eps': 0.01, 'n_reps': 1, 'batch_size': 512, 'norm_clip': 5, 'scope': 'ddpg', 'Q_lr': 0.001, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'action_l2': 1.0, 'uniform_priority': False, 'hidden': 256, 'relative_goals': False, 'nonuniform_sampling': True, 'polyak': 0.95, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7ff1f2a449d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'batch_size': 512, 'n_reps': 1, 'norm_eps': 0.01, 'action_l2': 1.0, 'Q_lr': 0.001, 'layers': 3, 'buffer_size': 1000000, 'relative_goals': False, 'nonuniform_sampling': True, 'hidden': 256, 'polyak': 0.95, 'norm_clip': 5, 'clip_obs': 200.0, 'max_u': 1.0, 'pi_lr': 0.001, 'uniform_priority': False}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fe0417639d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'scope': 'ddpg', 'buffer_size': 1000000, 'Q_lr': 0.001, 'norm_eps': 0.01, 'layers': 3, 'max_u': 1.0, 'norm_clip': 5, 'batch_size': 512, 'clip_obs': 200.0, 'action_l2': 1.0, 'hidden': 256, 'n_reps': 1, 'uniform_priority': False, 'polyak': 0.95, 'pi_lr': 0.001, 'relative_goals': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'nonuniform_sampling': True}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f9017e8b9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'norm_eps': 0.01, 'norm_clip': 5, 'Q_lr': 0.001, 'action_l2': 1.0, 'relative_goals': False, 'polyak': 0.95, 'max_u': 1.0, 'nonuniform_sampling': True, 'buffer_size': 1000000, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'batch_size': 512, 'hidden': 256, 'clip_obs': 200.0, 'pi_lr': 0.001, 'uniform_priority': False, 'n_reps': 1, 'scope': 'ddpg'}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f43c020b9d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_nonuniform_sampling: True
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'layers': 3, 'uniform_priority': False, 'relative_goals': False, 'clip_obs': 200.0, 'norm_eps': 0.01, 'n_reps': 1, 'hidden': 256, 'scope': 'ddpg', 'nonuniform_sampling': True, 'max_u': 1.0, 'buffer_size': 1000000, 'norm_clip': 5, 'action_l2': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'batch_size': 512, 'Q_lr': 0.001, 'polyak': 0.95, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f9318e229d8>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Record size less than learn start! Sample failed
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 200, in <module>
+    main()
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 196, in main
+    launch(**kwargs)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 181, in launch
+    policy_save_interval=policy_save_interval, save_policies=save_policies)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 48, in train
+    policy.train()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 408, in train
+    self.stage_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 392, in stage_batch
+    batch, bias = self.sample_batch()
+  File "/home/gsarma8/HER_Improvements/baselines/her/ddpg_priority.py", line 303, in sample_batch
+    transitions, w, rank_e_id = self.buffer.sample(self.batch_size, self.global_step, self.uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/replay_buffer.py", line 77, in sample
+    transitions[0], w[0], rank_e_id[0] = self.sample_transitions(buffers, self.priority_queue[0], batch_size[0], global_step, uniform_priority)
+  File "/home/gsarma8/HER_Improvements/baselines/her/her_per.py", line 34, in _sample_her_transitions
+    keys = sample_transitions[0].keys()
+TypeError: 'bool' object is not subscriptable
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD 
+with errorcode 0.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[her-fetch-instance:03243] 11 more processes have sent help message help-mpi-api.txt / mpi-abort

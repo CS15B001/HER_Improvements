@@ -1,0 +1,17 @@
+nohup: ignoring input
+Failed to import the site module
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/site.py", line 567, in <module>
+    main()
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/site.py", line 549, in main
+    known_paths = addusersitepackages(known_paths)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/site.py", line 284, in addusersitepackages
+    addsitedir(user_site, known_paths)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/site.py", line 206, in addsitedir
+    addpackage(sitedir, name, known_paths)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/site.py", line 167, in addpackage
+    exec(line)
+  File "<string>", line 1, in <module>
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/importlib/__init__.py", line 13, in <module>
+    import sys
+KeyboardInterrupt
