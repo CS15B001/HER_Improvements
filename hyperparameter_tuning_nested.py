@@ -21,4 +21,4 @@ for env_i in range(len(env_name)):
 			print("replay_k ", replay_k[replay_i])
 			os.system('nohup python3 -m baselines.her.experiment.train --num_cpu '+str(num_cpus)+' --env_name '+str(env_name[env_i])+ ' --n_epochs '+str(n_epochs[env_i]) \
 				+' --batch_size '+str(batch_size[batch_i])+' --n_reps '+str(n_reps)+' --replay_k '+str(replay_k[replay_i]) \
-				+' >log_file_'+str(env_name[env_i])+'_batch_size_'+str(batch_size[batch_i])+'_replay_k_'+str(replay_k[replay_i])+'_'+time_of_run+'.txt 2>&1')
+				+' >log_file_'+str(env_name[env_i])+'_n_cycles_50_batch_size_'+str(batch_size[batch_i])+'_replay_k_'+str(replay_k[replay_i])+'_'+time_of_run+'.txt 2>&1')

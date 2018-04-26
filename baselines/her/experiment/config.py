@@ -11,7 +11,7 @@ from baselines.her.her_per import make_sample_her_transitions
 
 DEFAULT_ENV_PARAMS = {
     'FetchReach-v0': {
-        'n_cycles': 10,
+        'n_cycles': 50,
     },
 }
 
@@ -32,7 +32,7 @@ DEFAULT_PARAMS = {
     'scope': 'ddpg',  # can be tweaked for testing
     'relative_goals': False,
     # training
-    'n_cycles': 10,  # per epoch
+    'n_cycles': 50,  # per epoch
     'rollout_batch_size': 2,  # per mpi thread
     'n_batches': 50,  # training batches per cycle
     'batch_size': 512,  # per mpi thread, measured in transitions and reduced to even multiple of chunk_length.

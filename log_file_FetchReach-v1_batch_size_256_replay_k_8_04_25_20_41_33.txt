@@ -1,0 +1,612 @@
+--------------------------------------------------------------------------
+[[46228,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+--------------------------------------------------------------------------
+[[46145,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+2018-04-26 01:52:41.308522: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-309492
+2018-04-26 01:52:41.313196: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-314039
+2018-04-26 01:52:41.323869: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-324831
+2018-04-26 01:52:41.326423: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-327300
+2018-04-26 01:52:41.332457: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-333372
+2018-04-26 01:52:41.368591: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-369527
+2018-04-26 01:52:41.400854: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-401673
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'clip_obs': 200.0, 'max_u': 1.0, 'layers': 3, 'Q_lr': 0.001, 'pi_lr': 0.001, 'n_reps': 1, 'buffer_size': 1000000, 'relative_goals': False, 'hidden': 256, 'norm_clip': 5, 'norm_eps': 0.01, 'action_l2': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'batch_size': 256, 'uniform_priority': False, 'polyak': 0.95, 'scope': 'ddpg'}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f93d430aa60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'clip_obs': 200.0, 'pi_lr': 0.001, 'norm_clip': 5, 'uniform_priority': False, 'n_reps': 1, 'layers': 3, 'relative_goals': False, 'batch_size': 256, 'Q_lr': 0.001, 'norm_eps': 0.01, 'action_l2': 1.0, 'buffer_size': 1000000, 'max_u': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'polyak': 0.95, 'hidden': 256, 'scope': 'ddpg'}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fbae3041a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'action_l2': 1.0, 'n_reps': 1, 'batch_size': 256, 'hidden': 256, 'Q_lr': 0.001, 'polyak': 0.95, 'relative_goals': False, 'norm_clip': 5, 'clip_obs': 200.0, 'scope': 'ddpg', 'max_u': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'pi_lr': 0.001, 'buffer_size': 1000000, 'uniform_priority': False, 'layers': 3, 'norm_eps': 0.01}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fba514a9a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'clip_obs': 200.0, 'n_reps': 1, 'buffer_size': 1000000, 'action_l2': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'max_u': 1.0, 'batch_size': 256, 'norm_eps': 0.01, 'scope': 'ddpg', 'uniform_priority': False, 'norm_clip': 5, 'polyak': 0.95, 'relative_goals': False, 'pi_lr': 0.001, 'hidden': 256, 'Q_lr': 0.001}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f3b69c87a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'hidden': 256, 'pi_lr': 0.001, 'polyak': 0.95, 'max_u': 1.0, 'clip_obs': 200.0, 'norm_clip': 5, 'layers': 3, 'batch_size': 256, 'relative_goals': False, 'n_reps': 1, 'scope': 'ddpg', 'buffer_size': 1000000, 'Q_lr': 0.001, 'norm_eps': 0.01, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'action_l2': 1.0}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f955b75fa60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-26 01:52:41.502087: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Creating a DDPG agent with action space 4 x 1.0...
+Logging to /tmp/openai-2018-04-26-01-52-41-503030
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'relative_goals': False, 'Q_lr': 0.001, 'pi_lr': 0.001, 'clip_obs': 200.0, 'buffer_size': 1000000, 'uniform_priority': False, 'scope': 'ddpg', 'n_reps': 1, 'action_l2': 1.0, 'layers': 3, 'hidden': 256, 'norm_eps': 0.01, 'norm_clip': 5, 'polyak': 0.95, 'batch_size': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'max_u': 1.0}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f15fb70aa60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'n_reps': 1, 'hidden': 256, 'buffer_size': 1000000, 'norm_clip': 5, 'layers': 3, 'max_u': 1.0, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'pi_lr': 0.001, 'clip_obs': 200.0, 'relative_goals': False, 'action_l2': 1.0, 'batch_size': 256, 'norm_eps': 0.01, 'Q_lr': 0.001, 'polyak': 0.95, 'scope': 'ddpg'}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f95c46aaa60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-26 01:52:41.651858: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-652675
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'layers': 3, 'norm_clip': 5, 'n_reps': 1, 'polyak': 0.95, 'hidden': 256, 'clip_obs': 200.0, 'norm_eps': 0.01, 'pi_lr': 0.001, 'max_u': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'uniform_priority': False, 'buffer_size': 1000000, 'batch_size': 256, 'scope': 'ddpg', 'relative_goals': False, 'action_l2': 1.0, 'Q_lr': 0.001}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fd93585fa60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+[her-fetch-instance:05770] 11 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[her-fetch-instance:05770] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'action_l2': 1.0, 'scope': 'ddpg', 'polyak': 0.95, 'Q_lr': 0.001, 'pi_lr': 0.001, 'buffer_size': 1000000, 'n_reps': 1, 'norm_eps': 0.01, 'hidden': 256, 'max_u': 1.0, 'norm_clip': 5, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'relative_goals': False, 'clip_obs': 200.0, 'batch_size': 256, 'layers': 3}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f356b247a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-26 01:52:41.825336: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-826183
+2018-04-26 01:52:41.925574: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-41-926494
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'max_u': 1.0, 'norm_eps': 0.01, 'hidden': 256, 'clip_obs': 200.0, 'layers': 3, 'relative_goals': False, 'n_reps': 1, 'action_l2': 1.0, 'polyak': 0.95, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'batch_size': 256, 'Q_lr': 0.001, 'pi_lr': 0.001, 'uniform_priority': False, 'norm_clip': 5, 'buffer_size': 1000000}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fdd77b2ca60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-26 01:52:42.006945: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-26-01-52-42-007751
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'relative_goals': False, 'pi_lr': 0.001, 'n_reps': 1, 'uniform_priority': False, 'batch_size': 256, 'norm_eps': 0.01, 'clip_obs': 200.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'scope': 'ddpg', 'polyak': 0.95, 'hidden': 256, 'Q_lr': 0.001, 'max_u': 1.0, 'norm_clip': 5, 'buffer_size': 1000000, 'action_l2': 1.0}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f8a5a2a9a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'batch_size': 256, 'polyak': 0.95, 'pi_lr': 0.001, 'action_l2': 1.0, 'layers': 3, 'buffer_size': 1000000, 'hidden': 256, 'norm_clip': 5, 'scope': 'ddpg', 'uniform_priority': False, 'relative_goals': False, 'Q_lr': 0.001, 'clip_obs': 200.0, 'max_u': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'n_reps': 1, 'norm_eps': 0.01}
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f23479a9a60>
+n_batches: 50
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+---------------------------------------------
+| epoch              | 0                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 20.0                 |
+| test/mean_Q        | -1.1847097           |
+| test/success_rate  | 0.016666666666666666 |
+| train/episode      | 20.0                 |
+| train/success_rate | 0.012500000000000002 |
+---------------------------------------------
+New best success rate: 0.016666666666666666. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_0.pkl ...
+-------------------------------------------
+| epoch              | 1                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 40.0               |
+| test/mean_Q        | -1.0284773         |
+| test/success_rate  | 0.8083333333333335 |
+| train/episode      | 40.0               |
+| train/success_rate | 0.2125             |
+-------------------------------------------
+New best success rate: 0.8083333333333335. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-------------------------------------------
+| epoch              | 2                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 60.0               |
+| test/mean_Q        | -1.1970311         |
+| test/success_rate  | 0.8583333333333334 |
+| train/episode      | 60.0               |
+| train/success_rate | 0.7916666666666666 |
+-------------------------------------------
+New best success rate: 0.8583333333333334. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-------------------------------------------
+| epoch              | 3                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 80.0               |
+| test/mean_Q        | -1.3088444         |
+| test/success_rate  | 0.85               |
+| train/episode      | 80.0               |
+| train/success_rate | 0.7374999999999999 |
+-------------------------------------------
+-------------------------------------------
+| epoch              | 4                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 100.0              |
+| test/mean_Q        | -1.0930434         |
+| test/success_rate  | 0.9333333333333332 |
+| train/episode      | 100.0              |
+| train/success_rate | 0.7666666666666666 |
+-------------------------------------------
+New best success rate: 0.9333333333333332. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-----------------------------------
+| epoch              | 5          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 120.0      |
+| test/mean_Q        | -1.0027801 |
+| test/success_rate  | 0.975      |
+| train/episode      | 120.0      |
+| train/success_rate | 0.8375     |
+-----------------------------------
+New best success rate: 0.975. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+Saving periodic policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_5.pkl ...
+-------------------------------------------
+| epoch              | 6                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 140.0              |
+| test/mean_Q        | -0.863739          |
+| test/success_rate  | 0.9916666666666667 |
+| train/episode      | 140.0              |
+| train/success_rate | 0.8624999999999999 |
+-------------------------------------------
+New best success rate: 0.9916666666666667. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-------------------------------------------
+| epoch              | 7                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 160.0              |
+| test/mean_Q        | -0.83909035        |
+| test/success_rate  | 1.0                |
+| train/episode      | 160.0              |
+| train/success_rate | 0.8958333333333334 |
+-------------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-----------------------------------
+| epoch              | 8          |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 180.0      |
+| test/mean_Q        | -0.7085474 |
+| test/success_rate  | 1.0        |
+| train/episode      | 180.0      |
+| train/success_rate | 0.875      |
+-----------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
+-------------------------------------------
+| epoch              | 9                  |
+| stats_g/mean       | 0.0                |
+| stats_g/std        | 1.0                |
+| stats_o/mean       | 0.0                |
+| stats_o/std        | 1.0                |
+| test/episode       | 200.0              |
+| test/mean_Q        | -0.734155          |
+| test/success_rate  | 1.0                |
+| train/episode      | 200.0              |
+| train/success_rate | 0.9041666666666667 |
+-------------------------------------------
+New best success rate: 1.0. Saving policy to /tmp/openai-2018-04-26-01-52-42-007751/policy_best.pkl ...
