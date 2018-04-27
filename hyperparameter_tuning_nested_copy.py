@@ -7,7 +7,7 @@ import datetime
 time_of_run = str(datetime.datetime.fromtimestamp(time.time()).strftime('%m_%d_%H_%M_%S'))
 batch_size = [512, 256]
 replay_k = [4,6,8]
-env_name = ['FetchReach-v1', 'FetchSlide-v1']
+env_name = ['FetchPush-v1', 'FetchPickAndPlace-v1']
 n_epochs = [3, 50]
 n_reps = 1
 num_cpus = 12

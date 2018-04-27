@@ -997,3 +997,100 @@ Saving periodic policy to /tmp/openai-2018-04-26-02-31-52-492034/policy_40.pkl .
 | train/episode      | 840.0                |
 | train/success_rate | 0.004166666666666667 |
 ---------------------------------------------
+---------------------------------------------
+| epoch              | 42                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 860.0                |
+| test/mean_Q        | -14.288003           |
+| test/success_rate  | 0.012500000000000002 |
+| train/episode      | 860.0                |
+| train/success_rate | 0.008333333333333333 |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 43                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 880.0                |
+| test/mean_Q        | -14.969596           |
+| test/success_rate  | 0.008333333333333333 |
+| train/episode      | 880.0                |
+| train/success_rate | 0.004166666666666667 |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 44                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 900.0                |
+| test/mean_Q        | -15.105817           |
+| test/success_rate  | 0.004166666666666667 |
+| train/episode      | 900.0                |
+| train/success_rate | 0.0                  |
+---------------------------------------------
+-----------------------------------
+| epoch              | 45         |
+| stats_g/mean       | 0.0        |
+| stats_g/std        | 1.0        |
+| stats_o/mean       | 0.0        |
+| stats_o/std        | 1.0        |
+| test/episode       | 920.0      |
+| test/mean_Q        | -15.278708 |
+| test/success_rate  | 0.0        |
+| train/episode      | 920.0      |
+| train/success_rate | 0.0        |
+-----------------------------------
+Saving periodic policy to /tmp/openai-2018-04-26-02-31-52-492034/policy_45.pkl ...
+----------------------------------
+| epoch              | 46        |
+| stats_g/mean       | 0.0       |
+| stats_g/std        | 1.0       |
+| stats_o/mean       | 0.0       |
+| stats_o/std        | 1.0       |
+| test/episode       | 940.0     |
+| test/mean_Q        | -15.43953 |
+| test/success_rate  | 0.0       |
+| train/episode      | 940.0     |
+| train/success_rate | 0.0       |
+----------------------------------
+---------------------------------------------
+| epoch              | 47                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 960.0                |
+| test/mean_Q        | -15.799726           |
+| test/success_rate  | 0.004166666666666667 |
+| train/episode      | 960.0                |
+| train/success_rate | 0.004166666666666667 |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 48                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 980.0                |
+| test/mean_Q        | -15.655101           |
+| test/success_rate  | 0.004166666666666667 |
+| train/episode      | 980.0                |
+| train/success_rate | 0.004166666666666667 |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 49                   |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 1000.0               |
+| test/mean_Q        | -16.17269            |
+| test/success_rate  | 0.004166666666666667 |
+| train/episode      | 1000.0               |
+| train/success_rate | 0.004166666666666667 |
+---------------------------------------------
