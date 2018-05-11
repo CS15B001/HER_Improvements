@@ -1,0 +1,502 @@
+--------------------------------------------------------------------------
+[[43444,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+--------------------------------------------------------------------------
+[[43361,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+[her-fetch-instance:02986] 11 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[her-fetch-instance:02986] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2018-05-02 18:41:56.912880: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-05-02 18:41:56.912896: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-05-02 18:41:56.931515: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-56-937940
+Logging to /tmp/openai-2018-05-02-18-41-56-938009
+Logging to /tmp/openai-2018-05-02-18-41-56-937947
+2018-05-02 18:41:56.954655: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-05-02 18:41:56.954786: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-56-955713
+Logging to /tmp/openai-2018-05-02-18-41-56-955770
+2018-05-02 18:41:56.961248: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-56-962157
+2018-05-02 18:41:56.963550: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-56-964302
+2018-05-02 18:41:56.991812: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-56-992907
+2018-05-02 18:41:57.197292: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-57-198207
+2018-05-02 18:41:57.221577: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /home/gsarma8/HER_Improvements/05_02_18_41_25
+2018-05-02 18:41:57.277530: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-57-278494
+2018-05-02 18:41:57.489156: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-05-02-18-41-57-490136
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+T: 50
+T: 50
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_Q_lr: 0.001
+_Q_lr: 0.001
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+_uniform_priority: False
+_hidden: 256
+_layers: 3
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+ddpg_params: {'scope': 'ddpg', 'batch_size': 256, 'relative_goals': False, 'hidden': 256, 'buffer_size': 1000000, 'norm_clip': 5, 'pi_lr': 0.001, 'Q_lr': 0.001, 'max_u': 1.0, 'n_reps': 1, 'action_l2': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'uniform_priority': False, 'polyak': 0.95, 'clip_obs': 200.0, 'norm_eps': 0.01}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7ff2fc796048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+ddpg_params: {'polyak': 0.95, 'relative_goals': False, 'pi_lr': 0.001, 'buffer_size': 1000000, 'hidden': 256, 'scope': 'ddpg', 'layers': 3, 'uniform_priority': False, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_eps': 0.01, 'clip_obs': 200.0, 'Q_lr': 0.001, 'batch_size': 256, 'n_reps': 1, 'norm_clip': 5, 'max_u': 1.0, 'action_l2': 1.0}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f9039b56048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_pi_lr: 0.001
+_polyak: 0.95
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+rollout_batch_size: 2
+test_with_polyak: False
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'max_u': 1.0, 'clip_obs': 200.0, 'polyak': 0.95, 'action_l2': 1.0, 'n_reps': 1, 'buffer_size': 1000000, 'batch_size': 256, 'Q_lr': 0.001, 'layers': 3, 'relative_goals': False, 'norm_eps': 0.01, 'norm_clip': 5, 'pi_lr': 0.001, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'uniform_priority': False, 'scope': 'ddpg', 'hidden': 256}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+_buffer_size: 1000000
+_clip_obs: 200.0
+ddpg_params: {'n_reps': 1, 'pi_lr': 0.001, 'Q_lr': 0.001, 'layers': 3, 'norm_clip': 5, 'scope': 'ddpg', 'buffer_size': 1000000, 'norm_eps': 0.01, 'uniform_priority': False, 'relative_goals': False, 'batch_size': 256, 'hidden': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'action_l2': 1.0, 'clip_obs': 200.0, 'polyak': 0.95, 'max_u': 1.0}
+env_name: FetchPickAndPlace-v1
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+make_env: <function prepare_params.<locals>.make_env at 0x7feda887c048>
+n_batches: 50
+n_cycles: 50
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f5e80438048>
+_norm_clip: 5
+_norm_eps: 0.01
+n_test_rollouts: 10
+noise_eps: 0.2
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+random_eps: 0.3
+replay_k: 6
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+noise_eps: 0.2
+random_eps: 0.3
+replay_strategy: future
+rollout_batch_size: 2
+_uniform_priority: False
+replay_k: 6
+test_with_polyak: False
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+ddpg_params: {'layers': 3, 'Q_lr': 0.001, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'relative_goals': False, 'polyak': 0.95, 'hidden': 256, 'buffer_size': 1000000, 'uniform_priority': False, 'clip_obs': 200.0, 'action_l2': 1.0, 'max_u': 1.0, 'pi_lr': 0.001, 'batch_size': 256, 'n_reps': 1, 'norm_clip': 5, 'scope': 'ddpg', 'norm_eps': 0.01}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f3501f96048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+T: 50
+_Q_lr: 0.001
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_max_u: 1.0
+_n_reps: 1
+_relative_goals: False
+_scope: ddpg
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_uniform_priority: False
+_norm_eps: 0.01
+_pi_lr: 0.001
+ddpg_params: {'network_class': 'baselines.her.actor_critic:ActorCritic', 'batch_size': 256, 'pi_lr': 0.001, 'layers': 3, 'polyak': 0.95, 'hidden': 256, 'uniform_priority': False, 'max_u': 1.0, 'action_l2': 1.0, 'norm_clip': 5, 'scope': 'ddpg', 'Q_lr': 0.001, 'n_reps': 1, 'buffer_size': 1000000, 'norm_eps': 0.01, 'clip_obs': 200.0, 'relative_goals': False}
+_polyak: 0.95
+_relative_goals: False
+T: 50
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+T: 50
+_scope: ddpg
+_uniform_priority: False
+_Q_lr: 0.001
+make_env: <function prepare_params.<locals>.make_env at 0x7fe8a887b048>
+n_batches: 50
+n_cycles: 50
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_Q_lr: 0.001
+_action_l2: 1.0
+ddpg_params: {'scope': 'ddpg', 'Q_lr': 0.001, 'hidden': 256, 'norm_clip': 5, 'uniform_priority': False, 'clip_obs': 200.0, 'polyak': 0.95, 'buffer_size': 1000000, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_eps': 0.01, 'layers': 3, 'n_reps': 1, 'max_u': 1.0, 'pi_lr': 0.001, 'action_l2': 1.0, 'batch_size': 256, 'relative_goals': False}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+_batch_size: 256
+replay_k: 6
+make_env: <function prepare_params.<locals>.make_env at 0x7f4e826d9048>
+n_batches: 50
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+_pi_lr: 0.001
+_polyak: 0.95
+_norm_clip: 5
+_norm_eps: 0.01
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'hidden': 256, 'batch_size': 256, 'polyak': 0.95, 'action_l2': 1.0, 'uniform_priority': False, 'clip_obs': 200.0, 'norm_clip': 5, 'buffer_size': 1000000, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'pi_lr': 0.001, 'n_reps': 1, 'Q_lr': 0.001, 'max_u': 1.0, 'layers': 3, 'relative_goals': False, 'norm_eps': 0.01}
+ddpg_params: {'n_reps': 1, 'batch_size': 256, 'Q_lr': 0.001, 'buffer_size': 1000000, 'relative_goals': False, 'norm_clip': 5, 'clip_obs': 200.0, 'norm_eps': 0.01, 'max_u': 1.0, 'polyak': 0.95, 'uniform_priority': False, 'scope': 'ddpg', 'pi_lr': 0.001, 'hidden': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'action_l2': 1.0, 'layers': 3}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7ff23a6d9048>
+n_batches: 50
+n_cycles: 50
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+n_test_rollouts: 10
+noise_eps: 0.2
+make_env: <function prepare_params.<locals>.make_env at 0x7f07fc25b048>
+n_batches: 50
+random_eps: 0.3
+replay_k: 6
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+T: 50
+replay_strategy: future
+rollout_batch_size: 2
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+_Q_lr: 0.001
+_action_l2: 1.0
+test_with_polyak: False
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+test_with_polyak: False
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'polyak': 0.95, 'scope': 'ddpg', 'max_u': 1.0, 'norm_eps': 0.01, 'Q_lr': 0.001, 'n_reps': 1, 'layers': 3, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'hidden': 256, 'action_l2': 1.0, 'buffer_size': 1000000, 'batch_size': 256, 'uniform_priority': False, 'norm_clip': 5, 'clip_obs': 200.0, 'relative_goals': False, 'pi_lr': 0.001}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f5b8a899048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'network_class': 'baselines.her.actor_critic:ActorCritic', 'hidden': 256, 'Q_lr': 0.001, 'n_reps': 1, 'scope': 'ddpg', 'norm_clip': 5, 'action_l2': 1.0, 'layers': 3, 'relative_goals': False, 'clip_obs': 200.0, 'polyak': 0.95, 'pi_lr': 0.001, 'max_u': 1.0, 'norm_eps': 0.01, 'uniform_priority': False, 'batch_size': 256, 'buffer_size': 1000000}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fbb299f8048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'norm_clip': 5, 'batch_size': 256, 'relative_goals': False, 'buffer_size': 1000000, 'clip_obs': 200.0, 'norm_eps': 0.01, 'pi_lr': 0.001, 'uniform_priority': False, 'layers': 3, 'max_u': 1.0, 'n_reps': 1, 'action_l2': 1.0, 'polyak': 0.95, 'scope': 'ddpg', 'Q_lr': 0.001, 'hidden': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic'}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fe59fed9048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+---------------------------------------------
+| epoch              | 0                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 20.0                 |
+| test/mean_Q        | -0.93402904          |
+| test/success_rate  | 0.037500000000000006 |
+| train/episode      | 100.0                |
+| train/success_rate | 0.03916666666666666  |
+---------------------------------------------
+New best success rate: 0.037500000000000006. Saving policy to /home/gsarma8/HER_Improvements/05_02_18_41_25/policy_best.pkl ...
+Saving periodic policy to /home/gsarma8/HER_Improvements/05_02_18_41_25/policy_0.pkl ...
+[her-fetch-instance:02986] *** Process received signal ***
+[her-fetch-instance:02986] Signal: Segmentation fault (11)
+[her-fetch-instance:02986] Signal code: Invalid permissions (2)
+[her-fetch-instance:02986] Failing at address: 0x215e6d0
+[her-fetch-instance:02986] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x11390)[0x7fd0f2718390]
+[her-fetch-instance:02986] [ 1] [0x215e6d0]
+[her-fetch-instance:02986] *** End of error message ***

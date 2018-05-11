@@ -1,0 +1,482 @@
+--------------------------------------------------------------------------
+[[45729,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+--------------------------------------------------------------------------
+[[45662,1],4]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+[her-fetch-instance:04245] 11 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[her-fetch-instance:04245] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From /home/gsarma8/.local/lib/python3.5/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+2018-04-27 10:31:09.975205: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-09-990977
+2018-04-27 10:31:10.285301: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-10-286515
+2018-04-27 10:31:10.485634: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-10-502991
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'batch_size': 512, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'clip_obs': 200.0, 'layers': 3, 'norm_eps': 0.01, 'scope': 'ddpg', 'action_l2': 1.0, 'hidden': 256, 'relative_goals': False, 'Q_lr': 0.001, 'polyak': 0.95, 'norm_clip': 5, 'buffer_size': 1000000, 'n_reps': 1, 'uniform_priority': False, 'max_u': 1.0, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f76b7407ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-27 10:31:10.720206: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-10-721497
+2018-04-27 10:31:10.840144: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-10-846654
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'scope': 'ddpg', 'max_u': 1.0, 'batch_size': 512, 'action_l2': 1.0, 'hidden': 256, 'buffer_size': 1000000, 'clip_obs': 200.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_clip': 5, 'Q_lr': 0.001, 'pi_lr': 0.001, 'uniform_priority': False, 'n_reps': 1, 'relative_goals': False, 'layers': 3, 'norm_eps': 0.01, 'polyak': 0.95}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f325b61fae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'pi_lr': 0.001, 'norm_eps': 0.01, 'max_u': 1.0, 'scope': 'ddpg', 'buffer_size': 1000000, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'clip_obs': 200.0, 'polyak': 0.95, 'n_reps': 1, 'layers': 3, 'norm_clip': 5, 'Q_lr': 0.001, 'relative_goals': False, 'batch_size': 512, 'hidden': 256, 'action_l2': 1.0, 'uniform_priority': False}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fe0aa987ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'norm_clip': 5, 'buffer_size': 1000000, 'hidden': 256, 'polyak': 0.95, 'max_u': 1.0, 'scope': 'ddpg', 'network_class': 'baselines.her.actor_critic:ActorCritic', 'Q_lr': 0.001, 'pi_lr': 0.001, 'layers': 3, 'clip_obs': 200.0, 'n_reps': 1, 'norm_eps': 0.01, 'uniform_priority': False, 'relative_goals': False, 'batch_size': 512, 'action_l2': 1.0}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f51d622aae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-27 10:31:11.403596: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-404713
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'action_l2': 1.0, 'max_u': 1.0, 'n_reps': 1, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'hidden': 256, 'norm_clip': 5, 'polyak': 0.95, 'uniform_priority': False, 'norm_eps': 0.01, 'relative_goals': False, 'scope': 'ddpg', 'Q_lr': 0.001, 'layers': 3, 'batch_size': 512, 'buffer_size': 1000000, 'clip_obs': 200.0, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f5523faaae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-27 10:31:11.494653: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-495748
+2018-04-27 10:31:11.695383: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-707431
+2018-04-27 10:31:11.737249: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-739809
+2018-04-27 10:31:11.801342: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-804124
+2018-04-27 10:31:11.899159: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-11-900392
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'action_l2': 1.0, 'scope': 'ddpg', 'n_reps': 1, 'hidden': 256, 'batch_size': 512, 'norm_eps': 0.01, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_clip': 5, 'layers': 3, 'Q_lr': 0.001, 'buffer_size': 1000000, 'relative_goals': False, 'max_u': 1.0, 'polyak': 0.95, 'clip_obs': 200.0, 'uniform_priority': False, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7ff51b4a8ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'pi_lr': 0.001, 'uniform_priority': False, 'n_reps': 1, 'Q_lr': 0.001, 'action_l2': 1.0, 'hidden': 256, 'polyak': 0.95, 'max_u': 1.0, 'buffer_size': 1000000, 'norm_clip': 5, 'relative_goals': False, 'batch_size': 512, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'norm_eps': 0.01, 'clip_obs': 200.0, 'layers': 3}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f5c02020ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+2018-04-27 10:31:12.189374: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Logging to /tmp/openai-2018-04-27-10-31-12-194116
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'buffer_size': 1000000, 'n_reps': 1, 'hidden': 256, 'uniform_priority': False, 'polyak': 0.95, 'Q_lr': 0.001, 'max_u': 1.0, 'action_l2': 1.0, 'batch_size': 512, 'relative_goals': False, 'scope': 'ddpg', 'norm_clip': 5, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'norm_eps': 0.01, 'pi_lr': 0.001, 'clip_obs': 200.0}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f915f328ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'norm_clip': 5, 'norm_eps': 0.01, 'action_l2': 1.0, 'clip_obs': 200.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'relative_goals': False, 'scope': 'ddpg', 'layers': 3, 'buffer_size': 1000000, 'polyak': 0.95, 'n_reps': 1, 'batch_size': 512, 'max_u': 1.0, 'uniform_priority': False, 'Q_lr': 0.001, 'hidden': 256, 'pi_lr': 0.001}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7feba4fa9ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'uniform_priority': False, 'action_l2': 1.0, 'clip_obs': 200.0, 'batch_size': 512, 'Q_lr': 0.001, 'relative_goals': False, 'hidden': 256, 'pi_lr': 0.001, 'buffer_size': 1000000, 'scope': 'ddpg', 'polyak': 0.95, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'norm_eps': 0.01, 'norm_clip': 5, 'max_u': 1.0, 'layers': 3, 'n_reps': 1}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7fe018087ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'Q_lr': 0.001, 'pi_lr': 0.001, 'norm_eps': 0.01, 'action_l2': 1.0, 'uniform_priority': False, 'hidden': 256, 'batch_size': 512, 'buffer_size': 1000000, 'max_u': 1.0, 'norm_clip': 5, 'layers': 3, 'polyak': 0.95, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'n_reps': 1, 'relative_goals': False, 'clip_obs': 200.0}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f6c71ea8ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 512
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'relative_goals': False, 'hidden': 256, 'scope': 'ddpg', 'network_class': 'baselines.her.actor_critic:ActorCritic', 'clip_obs': 200.0, 'layers': 3, 'Q_lr': 0.001, 'action_l2': 1.0, 'batch_size': 512, 'polyak': 0.95, 'max_u': 1.0, 'pi_lr': 0.001, 'norm_clip': 5, 'norm_eps': 0.01, 'n_reps': 1, 'uniform_priority': False, 'buffer_size': 1000000}
+env_name: FetchPush-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f8bf6c08ae8>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Training...
+Killed

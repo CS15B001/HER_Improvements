@@ -1,0 +1,98 @@
+Logging to /home/gsarma8/HER_Improvements/05_03_09_21_09
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'network_class': 'baselines.her.actor_critic:ActorCritic', 'scope': 'ddpg', 'buffer_size': 1000000, 'max_u': 1.0, 'clip_obs': 200.0, 'layers': 3, 'polyak': 0.95, 'uniform_priority': False, 'hidden': 256, 'Q_lr': 0.001, 'pi_lr': 0.001, 'n_reps': 1, 'relative_goals': False, 'action_l2': 1.0, 'norm_eps': 0.01, 'batch_size': 256, 'norm_clip': 5}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f7e1ce38048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 8
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+---------------------------------------------
+| epoch              | 0                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 20.0                 |
+| test/mean_Q        | -1.4544945           |
+| test/success_rate  | 0.037500000000000006 |
+| train/episode      | 100.0                |
+| train/success_rate | 0.03916666666666666  |
+---------------------------------------------
+New best success rate: 0.037500000000000006. Saving policy to /home/gsarma8/HER_Improvements/05_03_09_21_09/policy_best.pkl ...
+Saving periodic policy to /home/gsarma8/HER_Improvements/05_03_09_21_09/policy_0.pkl ...
+---------------------------------------------
+| epoch              | 1                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 40.0                 |
+| test/mean_Q        | -2.791427            |
+| test/success_rate  | 0.054166666666666675 |
+| train/episode      | 200.0                |
+| train/success_rate | 0.036666666666666674 |
+---------------------------------------------
+New best success rate: 0.054166666666666675. Saving policy to /home/gsarma8/HER_Improvements/05_03_09_21_09/policy_best.pkl ...
+---------------------------------------------
+| epoch              | 2                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 60.0                 |
+| test/mean_Q        | -2.6297948           |
+| test/success_rate  | 0.029166666666666664 |
+| train/episode      | 300.0                |
+| train/success_rate | 0.035833333333333335 |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 3                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 80.0                 |
+| test/mean_Q        | -3.200003            |
+| test/success_rate  | 0.05833333333333333  |
+| train/episode      | 400.0                |
+| train/success_rate | 0.043333333333333335 |
+---------------------------------------------
+New best success rate: 0.05833333333333333. Saving policy to /home/gsarma8/HER_Improvements/05_03_09_21_09/policy_best.pkl ...
+---------------------------------------------
+| epoch              | 4                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 100.0                |
+| test/mean_Q        | -3.3421564           |
+| test/success_rate  | 0.016666666666666666 |
+| train/episode      | 500.0                |
+| train/success_rate | 0.04416666666666667  |
+---------------------------------------------

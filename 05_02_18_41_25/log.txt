@@ -1,0 +1,48 @@
+Logging to /home/gsarma8/HER_Improvements/05_02_18_41_25
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_n_reps: 1
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+_uniform_priority: False
+ddpg_params: {'layers': 3, 'Q_lr': 0.001, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'relative_goals': False, 'polyak': 0.95, 'hidden': 256, 'buffer_size': 1000000, 'uniform_priority': False, 'clip_obs': 200.0, 'action_l2': 1.0, 'max_u': 1.0, 'pi_lr': 0.001, 'batch_size': 256, 'n_reps': 1, 'norm_clip': 5, 'scope': 'ddpg', 'norm_eps': 0.01}
+env_name: FetchPickAndPlace-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f3501f96048>
+n_batches: 50
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 6
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+---------------------------------------------
+| epoch              | 0                    |
+| stats_g/mean       | 0.0                  |
+| stats_g/std        | 1.0                  |
+| stats_o/mean       | 0.0                  |
+| stats_o/std        | 1.0                  |
+| test/episode       | 20.0                 |
+| test/mean_Q        | -0.93402904          |
+| test/success_rate  | 0.037500000000000006 |
+| train/episode      | 100.0                |
+| train/success_rate | 0.03916666666666666  |
+---------------------------------------------
+New best success rate: 0.037500000000000006. Saving policy to /home/gsarma8/HER_Improvements/05_02_18_41_25/policy_best.pkl ...
+Saving periodic policy to /home/gsarma8/HER_Improvements/05_02_18_41_25/policy_0.pkl ...

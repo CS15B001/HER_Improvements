@@ -1,0 +1,4 @@
+Running  FetchSlide-v1
+Batch Size  256
+replay_k  6
+replay_k  8

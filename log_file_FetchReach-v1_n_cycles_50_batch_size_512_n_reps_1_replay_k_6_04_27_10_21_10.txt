@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------
+[[44750,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: her-fetch-instance
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/gsarma8/HER_Improvements/baselines/her/experiment/train.py", line 10, in <module>
+    from baselines.common import set_global_seeds
+  File "/home/gsarma8/HER_Improvements/baselines/common/__init__.py", line 3, in <module>
+    from baselines.common.math_util import *
+  File "/home/gsarma8/HER_Improvements/baselines/common/math_util.py", line 2, in <module>
+    import scipy.signal
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/scipy/signal/__init__.py", line 314, in <module>
+    from ._peak_finding import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/scipy/signal/_peak_finding.py", line 10, in <module>
+    from scipy.stats import scoreatpercentile
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/scipy/stats/__init__.py", line 343, in <module>
+    from .stats import *
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/scipy/stats/stats.py", line 172, in <module>
+    from . import mstats_basic
+  File "/home/gsarma8/.local/lib/python3.5/site-packages/scipy/stats/mstats_basic.py", line 695, in <module>
+    'stderr'))
+  File "/home/gsarma8/.conda/envs/gym/lib/python3.5/collections/__init__.py", line 428, in namedtuple
+    exec(class_definition, namespace)
+  File "<string>", line 1, in <module>
+KeyboardInterrupt
